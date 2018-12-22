@@ -12,14 +12,14 @@ timezone:            #网站时区。Hexo 默认使用您电脑的时区
 
 # URL 网址
 ## 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
-url: http://dangchaofeng.github.io/blog
-root: /blog/
+url: http://dangchaofeng.github.io/blog/public
+root: /blog/public/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory 目录配置
 source_dir: source     #源文件夹，这个文件夹用来存放内容。
-public_dir: public     #公共文件夹，这个文件夹用于存放生成的站点文件。
+public_dir: dist     #公共文件夹，这个文件夹用于存放生成的站点文件。
 tag_dir: tags         #标签文件夹
 archive_dir: archives     #归档文件夹
 category_dir: categories #分类文件夹
