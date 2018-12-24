@@ -68,16 +68,22 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://github.com/dangchaofeng/blog.git
+- type: git
+  repository: git@github.com:dangchaofeng/blog.git
   branch: master
+  # other deployer
+- type: leancloud_counter_security_sync
+
+
 search:
   path: search.xml
   field: post
   format: html
   limit: 10000
-
-# 作者：嘟爷MD
-# 链接：https://www.jianshu.com/p/df19bb51c6ea
-# 來源：简书
-# 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+# 访问数据监测
+leancloud_counter_security:
+  enable_sync: true
+  app_id: 12ByTVwdIx2mnE7V55u5V8d2-gzGzoHsz #<app_id>
+  app_key: 1XWOszT9DM7UmRHM4BXfmz06 #<app_key>
+  username: #如留空则将在部署时询问
+  password: #建议留空以保证安全性，如留空则将在部署时询问
