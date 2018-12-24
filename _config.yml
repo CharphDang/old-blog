@@ -63,7 +63,7 @@ pagination_dir: page    #分页目录
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jacman
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,6 +71,11 @@ deploy:
   type: git
   repository: https://github.com/dangchaofeng/blog.git
   branch: master
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # 作者：嘟爷MD
 # 链接：https://www.jianshu.com/p/df19bb51c6ea
