@@ -6,6 +6,7 @@ tags:
 categories: 
 - linux
 - node
+comments: false
 ---
 1. 首先我们本地需要有一个已经下载好的node文件
 
