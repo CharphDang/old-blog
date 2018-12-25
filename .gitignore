@@ -1,7 +1,7 @@
 .DS_Store
 .deploy_git
 node_modules
-blogApp
+app
 
 # local env files
 .env.local
