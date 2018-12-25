@@ -68,9 +68,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repository: git@github.com:dangchaofeng/blog.git
-  branch: master
+# - type: git
+#   repository: git@github.com:dangchaofeng/blog.git
+#   branch: master
   # other deployer
 - type: leancloud_counter_security_sync
 
