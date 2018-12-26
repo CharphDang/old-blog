@@ -102,31 +102,25 @@
 
 
 
-  <meta name="description" content="首先我们本地需要有一个已经下载好的node文件  [下载地址1（英文）]: (https://nodejs.org/en/download/)  [下载地址2（中文）]: (http://nodejs.cn/download/)   备注： 首先通过ssh连接我们要进入的linux系统中，输入密码连接成功后，通过  uname -a  命令查看到Linux系统位数是64位（备注：x86_64表示">
-<meta name="keywords" content="linux,node">
+  <meta name="description" content="相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。  首先，npm 是node.js自带的功能。查看npm版本  12npm -v6.4.1  升级npm版本  1234mac下: 	sudo npm install npm -gwindow下:	npm install">
+<meta name="keywords" content="npm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何给无网的服务器linux环境安装nodeJs">
-<meta property="og:url" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/index.html">
+<meta property="og:title" content="npm-command">
+<meta property="og:url" content="http://dangchaofeng.github.io/blog/dist/2018/12/26/npm-command/index.html">
 <meta property="og:site_name" content="煦千">
-<meta property="og:description" content="首先我们本地需要有一个已经下载好的node文件  [下载地址1（英文）]: (https://nodejs.org/en/download/)  [下载地址2（中文）]: (http://nodejs.cn/download/)   备注： 首先通过ssh连接我们要进入的linux系统中，输入密码连接成功后，通过  uname -a  命令查看到Linux系统位数是64位（备注：x86_64表示">
+<meta property="og:description" content="相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。  首先，npm 是node.js自带的功能。查看npm版本  12npm -v6.4.1  升级npm版本  1234mac下: 	sudo npm install npm -gwindow下:	npm install">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img1.jpg">
-<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img2.jpg">
-<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img3.jpg">
-<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img4.jpg">
-<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img5.jpg">
-<meta property="og:updated_time" content="2018-12-26T09:29:11.139Z">
+<meta property="og:updated_time" content="2018-12-26T09:31:34.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何给无网的服务器linux环境安装nodeJs">
-<meta name="twitter:description" content="首先我们本地需要有一个已经下载好的node文件  [下载地址1（英文）]: (https://nodejs.org/en/download/)  [下载地址2（中文）]: (http://nodejs.cn/download/)   备注： 首先通过ssh连接我们要进入的linux系统中，输入密码连接成功后，通过  uname -a  命令查看到Linux系统位数是64位（备注：x86_64表示">
-<meta name="twitter:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img1.jpg">
+<meta name="twitter:title" content="npm-command">
+<meta name="twitter:description" content="相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。  首先，npm 是node.js自带的功能。查看npm版本  12npm -v6.4.1  升级npm版本  1234mac下: 	sudo npm install npm -gwindow下:	npm install">
 
 
 
 
 
 
-  <link rel="canonical" href="http://dangchaofeng.github.io/blog/dist/2018/12/24/no-network-linux-install-nodeJs/">
+  <link rel="canonical" href="http://dangchaofeng.github.io/blog/dist/2018/12/26/npm-command/">
 
 
 
@@ -136,7 +130,7 @@
   };
 </script>
 
-  <title>如何给无网的服务器linux环境安装nodeJs | 煦千</title>
+  <title>npm-command | 煦千</title>
   
 
 
@@ -339,7 +333,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/24/no-network-linux-install-nodeJs/">
+    <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/26/npm-command/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DangChaofeng">
@@ -356,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">如何给无网的服务器linux环境安装nodeJs
+          <h1 class="post-title" itemprop="name headline">npm-command
 
               
             
@@ -382,24 +376,12 @@
                 
               
 
-              <time title="创建时间：2018-12-24 10:59:49" itemprop="dateCreated datePublished" datetime="2018-12-24T10:59:49+08:00">2018-12-24</time>
+              <time title="创建时间：2018-12-26 16:23:12 / 修改时间：17:31:34" itemprop="dateCreated datePublished" datetime="2018-12-26T16:23:12+08:00">2018-12-26</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-26 17:29:11" itemprop="dateModified" datetime="2018-12-26T17:29:11+08:00">2018-12-26</time>
               
             
           </span>
@@ -416,14 +398,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/linux/node/" itemprop="url" rel="index"><span itemprop="name">node</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/npm/" itemprop="url" rel="index"><span itemprop="name">npm</span></a></span>
 
                 
                 
@@ -435,7 +410,7 @@
 
           
           
-             <span id="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/" class="leancloud_visitors" data-flag-title="如何给无网的服务器linux环境安装nodeJs">
+             <span id="/blog/dist/2018/12/26/npm-command/" class="leancloud_visitors" data-flag-title="npm-command">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -466,55 +441,47 @@
       
 
       
-        <ol>
-<li><p>首先我们本地需要有一个已经下载好的node文件</p>
-<ul>
-<li><p>[下载地址1（英文）]: (<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>)</p>
-</li>
-<li><p>[下载地址2（中文）]: (<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a>)</p>
+        <h5 id="相信大家很多人，包括我自己，常常会对npm-install-–save-dev-、-npm-install-–save傻傻分不清楚-今天这里主要是对npm的常用命令进行一个总结。"><a href="#相信大家很多人，包括我自己，常常会对npm-install-–save-dev-、-npm-install-–save傻傻分不清楚-今天这里主要是对npm的常用命令进行一个总结。" class="headerlink" title="相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。"></a>相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。</h5><hr>
 <blockquote>
-<p> 备注： 首先通过ssh连接我们要进入的linux系统中，输入密码连接成功后，通过  uname -a  命令查看到Linux系统位数是64位（备注：x86_64表示64位系统， i686 i386表示32位系统），如图：</p>
+<p>首先，npm 是node.js自带的功能。查看npm版本</p>
 </blockquote>
-<p>  <img src="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img1.jpg" alt="Image1 text"></p>
-</li>
-</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line"><span class="number">6.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>所以我们需要下载一个64位linux二进制包。</p>
+<p>升级npm版本</p>
 </blockquote>
-<p><img src="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img2.jpg" alt="Image2 text"></p>
-</li>
-<li><p>将下载下来的文件上传服务器并解压，查看版本正常后，进行创建全局软连接</p>
-<ul>
-<li><p>将文件上传服务器，通过scp命令，如图：</p>
-<p><img src="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img3.jpg" alt="Image3 text"></p>
-</li>
-<li><p>然后再次通过ssh连接服务器后，在上面找到文件进行解压，正常流程如图：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mac下: </span><br><span class="line">	sudo npm install npm -g</span><br><span class="line"><span class="built_in">window</span>下:</span><br><span class="line">	npm install npm -g</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>备注：正常流程，linux支持xz解压，将文件解压为tar类型，再通过tar -xvf 解决即可。</p>
-<p>如果你的linux不支持xz解压，请在自己本地<a href="https://www.jianshu.com/p/6efadc7f86cf" target="_blank" rel="noopener">下载配置xz</a>并且解压为tar文件，再通过scp命令传到服务器上，再通过tar -xvf 解决即可。</p>
+<p>使用npm安装模块</p>
 </blockquote>
-<p><img src="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img4.jpg" alt="Image4 text"></p>
-</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><p>最后一步，我们需要进入我所在tar解压后的文件夹下/bin</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;Module Name&gt;</span><br><span class="line">eg: 使用npm安装node中的express框架</span><br><span class="line">	npm install express</span><br></pre></td></tr></table></figure>
+<p>安装好之后，express包就会放在当前工程目录下的node_modules 目录中，因此在代码中只需要通过 <strong>require(‘express’)</strong> 的方式就好，无需指定第三方包路径。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>备注：进入到文件夹/bin下后，ls一下，会发现有node 和npm的存在，我们执行了node -v, npm -v；发现提示command not fount 命令不存在，因为我们没有创建全局软连接。</p>
-<ul>
-<li>ln -s /dcf/node-v10.14.2-linux-x64/bin/node /usr/local/bin/</li>
-<li>ln -s /dcf/node-v10.14.2-linux-x64/bin/npm /usr/local/bin/</li>
-</ul>
-<p>通过ln -s 创建全局软连接之后，就可以正常使用。</p>
-<p>注意：一定要用绝对路径，不要用相对路径去配置软连接，那样会无效！</p>
+<p>默认方式为本地安装，还有一种是全局安装</p>
 </blockquote>
-<p><img src="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/img5.jpg" alt="Image5 text"></p>
-</li>
-</ul>
-<ol start="3">
-<li>全局软连接建立完成后，执行node -v； npm -v；发现有版本后，就说明安装成了。</li>
-</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express -g   # 全局安装</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来，我们列举下容易混淆的方式（注意①②的不同）</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">npm install X:</span><br><span class="line"></span><br><span class="line">	- 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">	- 不会修改package.json</span><br><span class="line"></span><br><span class="line">	- 之后运行npm install命令时，不会自动安装X</span><br><span class="line">    </span><br><span class="line">npm install X --save:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ①dependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，会自动安装msbuild到		  node_modules目录中</span><br><span class="line">npm install X --save-dev:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ②devDependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，不会自动安装X到			  node_modules目录中</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>npm install 使用原则</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运行时需要用到的包使用--save，否则使用--save-dev。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>npm 卸载模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall X</span><br><span class="line">卸载后，你可以到 /node_modules/ 目录下查看包是否还存在，或者使用以下命令查看：</span><br><span class="line">npm ls</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>更新模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update X</span><br></pre></td></tr></table></figure>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><blockquote>
+<p>大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。淘宝 NPM 镜像是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。</p>
+<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
+<p>注意： 如果使用的是cnpm，则只需要将第一个npm命令变为cnpm即可，其他和npm命令使用方式相同。</p>
 
       
     </div>
@@ -538,9 +505,7 @@
       
         <div class="post-tags">
           
-            <a href="/blog/dist/tags/linux/" rel="tag"># linux</a>
-          
-            <a href="/blog/dist/tags/node/" rel="tag"># node</a>
+            <a href="/blog/dist/tags/npm/" rel="tag"># npm</a>
           
         </div>
       
@@ -553,15 +518,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/dist/2018/12/24/no-network-linux-install-nodeJs/" rel="next" title="如何给无网的服务器linux环境安装nodeJs">
+                <i class="fa fa-chevron-left"></i> 如何给无网的服务器linux环境安装nodeJs
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/dist/2018/12/26/npm-command/" rel="prev" title="npm-command">
-                npm-command <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -707,6 +681,22 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#相信大家很多人，包括我自己，常常会对npm-install-–save-dev-、-npm-install-–save傻傻分不清楚-今天这里主要是对npm的常用命令进行一个总结。"><span class="nav-number">1.</span> <span class="nav-text">相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#使用淘宝镜像"><span class="nav-number"></span> <span class="nav-text">使用淘宝镜像</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

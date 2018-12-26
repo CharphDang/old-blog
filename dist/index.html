@@ -332,6 +332,215 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/26/npm-command/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DangChaofeng">
+      <meta itemprop="description" content="记录成长史">
+      <meta itemprop="image" content="/blog/dist/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="煦千">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/dist/2018/12/26/npm-command/" class="post-title-link" itemprop="url">npm-command</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-26 16:23:12 / 修改时间：17:31:34" itemprop="dateCreated datePublished" datetime="2018-12-26T16:23:12+08:00">2018-12-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/npm/" itemprop="url" rel="index"><span itemprop="name">npm</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+             <span id="/blog/dist/2018/12/26/npm-command/" class="leancloud_visitors" data-flag-title="npm-command">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="相信大家很多人，包括我自己，常常会对npm-install-–save-dev-、-npm-install-–save傻傻分不清楚-今天这里主要是对npm的常用命令进行一个总结。"><a href="#相信大家很多人，包括我自己，常常会对npm-install-–save-dev-、-npm-install-–save傻傻分不清楚-今天这里主要是对npm的常用命令进行一个总结。" class="headerlink" title="相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。"></a>相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。</h5><hr>
+<blockquote>
+<p>首先，npm 是node.js自带的功能。查看npm版本</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line"><span class="number">6.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>升级npm版本</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mac下: </span><br><span class="line">	sudo npm install npm -g</span><br><span class="line"><span class="built_in">window</span>下:</span><br><span class="line">	npm install npm -g</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用npm安装模块</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;Module Name&gt;</span><br><span class="line">eg: 使用npm安装node中的express框架</span><br><span class="line">	npm install express</span><br></pre></td></tr></table></figure>
+<p>安装好之后，express包就会放在当前工程目录下的node_modules 目录中，因此在代码中只需要通过 <strong>require(‘express’)</strong> 的方式就好，无需指定第三方包路径。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式为本地安装，还有一种是全局安装</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express -g   # 全局安装</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来，我们列举下容易混淆的方式（注意①②的不同）</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">npm install X:</span><br><span class="line"></span><br><span class="line">	- 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">	- 不会修改package.json</span><br><span class="line"></span><br><span class="line">	- 之后运行npm install命令时，不会自动安装X</span><br><span class="line">    </span><br><span class="line">npm install X --save:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ①dependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，会自动安装msbuild到		  node_modules目录中</span><br><span class="line">npm install X --save-dev:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ②devDependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，不会自动安装X到			  node_modules目录中</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>npm install 使用原则</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运行时需要用到的包使用--save，否则使用--save-dev。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>npm 卸载模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall X</span><br><span class="line">卸载后，你可以到 /node_modules/ 目录下查看包是否还存在，或者使用以下命令查看：</span><br><span class="line">npm ls</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>更新模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update X</span><br></pre></td></tr></table></figure>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><blockquote>
+<p>大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。淘宝 NPM 镜像是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。</p>
+<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
+<p>注意： 如果使用的是cnpm，则只需要将第一个npm命令变为cnpm即可，其他和npm命令使用方式相同。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/24/no-network-linux-install-nodeJs/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -596,7 +805,7 @@
                 
                   <a href="/blog/dist/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -613,7 +822,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -630,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
