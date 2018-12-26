@@ -1,4 +1,6 @@
-# 入门了解mac typora编辑器，并熟练编写md文件
+# 博客入门：gitHub + hexo 建站
+
+### 入门了解mac typora编辑器，并熟练编写md文件
 
 > 大标题的写法
 
