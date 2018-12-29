@@ -332,6 +332,213 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/29/mocha/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DangChaofeng">
+      <meta itemprop="description" content="记录成长史">
+      <meta itemprop="image" content="/blog/dist/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="煦千">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blog/dist/2018/12/29/mocha/" class="post-title-link" itemprop="url">单元测试</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-29 15:31:51 / 修改时间：15:33:59" itemprop="dateCreated datePublished" datetime="2018-12-29T15:31:51+08:00">2018-12-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/mocha/" itemprop="url" rel="index"><span itemprop="name">mocha</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+             <span id="/blog/dist/2018/12/29/mocha/" class="leancloud_visitors" data-flag-title="单元测试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="mocha-chai-单元测试"><a href="#mocha-chai-单元测试" class="headerlink" title="mocha + chai 单元测试"></a>mocha + chai 单元测试</h1><p>参考链接： <a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html" target="_blank" rel="noopener">测试框架 Mocha 实例教程</a><br>断言库使用 <a href="https://www.chaijs.com/api/bdd/" target="_blank" rel="noopener">chai</a></p>
+<blockquote>
+<h4 id="主要为个人的练习记录存放，下面会展示一些或者重点易错点。"><a href="#主要为个人的练习记录存放，下面会展示一些或者重点易错点。" class="headerlink" title="主要为个人的练习记录存放，下面会展示一些或者重点易错点。"></a>主要为个人的练习记录存放，下面会展示一些或者重点易错点。</h4></blockquote>
+<h5 id="通配符（建议，如果只有一个文件的时候，不要使用-这种匹配模式）。"><a href="#通配符（建议，如果只有一个文件的时候，不要使用-这种匹配模式）。" class="headerlink" title="通配符（建议，如果只有一个文件的时候，不要使用{}这种匹配模式）。"></a>通配符（建议，如果只有一个文件的时候，不要使用{}这种匹配模式）。</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ mocha spec/&#123;my,awesome&#125;.js</span><br><span class="line">$ mocha test/unit<span class="comment">/*.js</span></span><br><span class="line"><span class="comment">$ mocha 'test/**/</span>*.@(js|jsx)<span class="string">' // 也支持node的通配符，使用字符串包裹起来即可</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">提示： 如果只有一个文件的时候，也需要加上, 比如 mocha test/&#123;cf,&#125;.js 否则会报错。</span></span><br><span class="line"><span class="string">Warning: Could not find any test files matching pattern: test/&#123;cf&#125;.js</span></span><br><span class="line"><span class="string">No test files found</span></span><br></pre></td></tr></table></figure>
+<h5 id="递归执行（mocha默认会执行当前目录下的test目录下的文件）"><a href="#递归执行（mocha默认会执行当前目录下的test目录下的文件）" class="headerlink" title="递归执行（mocha默认会执行当前目录下的test目录下的文件）"></a>递归执行（mocha默认会执行当前目录下的test目录下的文件）</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">如果想执行内嵌的其他文件，比如：</span><br><span class="line">test/cf<span class="comment">/**.js;</span></span><br><span class="line"><span class="comment">test/gg/tt/**.js;</span></span><br><span class="line"><span class="comment">这种默认使用mocha命令是不会执行的，因为他们不在test目录下。</span></span><br><span class="line"><span class="comment">可以使用：</span></span><br><span class="line"><span class="comment">mocha --recursive 即可以递归执行test目录下所有文件，包含深度嵌套的。</span></span><br></pre></td></tr></table></figure>
+<h5 id="显示报告结果-reporter参数用来指定测试报告的格式，默认是spec格式。"><a href="#显示报告结果-reporter参数用来指定测试报告的格式，默认是spec格式。" class="headerlink" title="显示报告结果(--reporter参数用来指定测试报告的格式，默认是spec格式。)"></a>显示报告结果(<code>--reporter</code>参数用来指定测试报告的格式，默认是<code>spec</code>格式。)</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mocha</span><br><span class="line"># 等同于</span><br><span class="line">$ mocha --reporter spec</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>--reporters</code>参数可以显示所有内置的报告格式。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mocha --reporters</span><br></pre></td></tr></table></figure>
+<h5 id="生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）"><a href="#生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）" class="headerlink" title="生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）"></a>生成报告结果（使用<a href="http://adamgruber.github.io/mochawesome/" target="_blank" rel="noopener"><code>mochawesome</code></a>模块，可以生成漂亮的HTML格式的报告。）</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev mochawesome</span><br><span class="line">$ ../node_modules/.bin/mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>mocha</code>命令使用了项目内安装的版本，而不是全局安装的版本，因为<code>mochawesome</code>模块是安装在项目内的。</p>
+<p>然后，测试结果报告就在<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo02/mochawesome-reports" target="_blank" rel="noopener"><code>mochaawesome-reports</code></a>子目录生成。</p>
+<h5 id="配置文件mocha-opts"><a href="#配置文件mocha-opts" class="headerlink" title="配置文件mocha.opts"></a>配置文件mocha.opts</h5><p>Mocha允许在<code>test</code>目录下面，放置配置文件<code>mocha.opts</code>，把命令行参数写在里面。请先进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo03" target="_blank" rel="noopener"><code>demo03</code></a>目录，运行下面的命令。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mocha --recursive --reporter tap</span><br></pre></td></tr></table></figure>
+<p>上面这个命令有两个参数<code>--recursive</code>、<code>--reporter tap</code>。</p>
+<p>然后，把这两个参数写入<code>test</code>目录下的<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo03/test/mocha.opts" target="_blank" rel="noopener"><code>mocha.opts</code></a>文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--reporter tap</span><br><span class="line">--recursive</span><br></pre></td></tr></table></figure>
+<p>然后，执行<code>mocha</code>就能取得与第一行命令一样的效果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mocha</span><br></pre></td></tr></table></figure>
+<p>如果测试用例不是存放在test子目录，可以在<code>mocha.opts</code>写入以下内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">otherDirTests</span><br><span class="line">--recursive</span><br></pre></td></tr></table></figure>
+<p>上面代码指定运行<code>otherDirTests</code>目录及其子目录之中的测试脚本。</p>
+<h5 id="ES6测试"><a href="#ES6测试" class="headerlink" title="ES6测试"></a>ES6测试</h5><p>如果测试脚本是用ES6写的，那么运行测试之前，需要先用Babel转码。进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo04" target="_blank" rel="noopener"><code>demo04</code></a>目录，打开<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo04/test/add.test.js" target="_blank" rel="noopener"><code>test/add.test.js</code></a>文件，可以看到这个测试用例是用ES6写的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> add <span class="keyword">from</span> <span class="string">'../src/add.js'</span>;</span><br><span class="line"><span class="keyword">import</span> chai <span class="keyword">from</span> <span class="string">'chai'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> expect = chai.expect;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'加法函数的测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  it(<span class="string">'1 加 1 应该等于 2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(add(<span class="number">1</span>, <span class="number">1</span>)).to.be.equal(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>ES6转码，需要安装Babel。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install babel-core babel-preset-es2015 --save-dev</span><br></pre></td></tr></table></figure>
+<p>然后，在项目目录下面，新建一个<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo04/.babelrc" target="_blank" rel="noopener"><code>.babelrc</code></a>配置文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [ <span class="string">"es2015"</span> ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后，使用<code>--compilers</code>参数指定测试脚本的转码器。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ../node_modules/mocha/bin/mocha --compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>--compilers</code>参数后面紧跟一个用冒号分隔的字符串，冒号左边是文件的后缀名，右边是用来处理这一类文件的模块名。上面代码表示，运行测试之前，先用<code>babel-core/register</code>模块，处理一下<code>.js</code>文件。由于这里的转码器安装在项目内，所以要使用项目内安装的Mocha；如果转码器安装在全局，就可以使用全局的Mocha。</p>
+<blockquote>
+<h4 id="可以结合mocha-opts使用，或者在package-json中自定义命令去实现。"><a href="#可以结合mocha-opts使用，或者在package-json中自定义命令去实现。" class="headerlink" title="可以结合mocha.opts使用，或者在package.json中自定义命令去实现。"></a>可以结合mocha.opts使用，或者在package.json中自定义命令去实现。</h4></blockquote>
+<h6 id="package-json（使用方式：npm-run-test）"><a href="#package-json（使用方式：npm-run-test）" class="headerlink" title="package.json（使用方式：npm run test）"></a>package.json（使用方式：<code>npm run test</code>）</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"mocha --recursive --compilers js:babel-core/register"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>–compilers在使用过程中提示在未来版本中将被移除，推荐使用下面这种方式！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"mocha --recursive --require babel-core/register"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h6 id="Mocha-opts（使用方式：-mocha）"><a href="#Mocha-opts（使用方式：-mocha）" class="headerlink" title="Mocha.opts（使用方式： mocha）"></a>Mocha.opts（使用方式： <code>mocha</code>）</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--reporter spec</span><br><span class="line">--recursive</span><br><span class="line">--compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
+<p>–compilers在使用过程中提示在未来版本中将被移除，推荐使用下面这种方式！</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--reporter spec</span><br><span class="line">--recursive</span><br><span class="line">--<span class="built_in">require</span> babel-core/register</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/27/English3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1720,7 +1927,7 @@
                 
                   <a href="/blog/dist/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1741,7 +1948,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1762,7 +1971,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
