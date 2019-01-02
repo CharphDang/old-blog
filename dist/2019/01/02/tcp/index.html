@@ -102,27 +102,28 @@
 
 
 
-  <meta name="description" content="第二堂课笔记 【金字塔排序的意义】：以战养战  【词根】： -nat-(生)  -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）12345678910111">
-<meta name="keywords" content="English">
+  <meta name="description" content="TCP三次握手四次挥手TCP的状态 (SYN, FIN, ACK, PSH, RST, URG) 在TCP层，有个FLAGS字段，这个字段有以下几个标识：SYN, FIN, ACK, PSH, RST, URG. 其中，对于我们日常的分析有用的就是前面的五个字段。  123456789SYN表示建立连接，FIN表示关闭连接，ACK表示响应，PSH表示有 DATA数据传输，RST表示连接重置。 其中">
+<meta name="keywords" content="tcp连接、断开连接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="词悬浮-词汇速记法2">
-<meta property="og:url" content="http://dangchaofeng.github.io/blog/dist/2018/12/26/English2/index.html">
+<meta property="og:title" content="TCP三次握手四次挥手">
+<meta property="og:url" content="http://dangchaofeng.github.io/blog/dist/2019/01/02/tcp/index.html">
 <meta property="og:site_name" content="煦千">
-<meta property="og:description" content="第二堂课笔记 【金字塔排序的意义】：以战养战  【词根】： -nat-(生)  -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）12345678910111">
+<meta property="og:description" content="TCP三次握手四次挥手TCP的状态 (SYN, FIN, ACK, PSH, RST, URG) 在TCP层，有个FLAGS字段，这个字段有以下几个标识：SYN, FIN, ACK, PSH, RST, URG. 其中，对于我们日常的分析有用的就是前面的五个字段。  123456789SYN表示建立连接，FIN表示关闭连接，ACK表示响应，PSH表示有 DATA数据传输，RST表示连接重置。 其中">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/26/English2/img.jpg">
-<meta property="og:updated_time" content="2018-12-29T07:46:27.780Z">
+<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2019/01/02/tcp/img1.png">
+<meta property="og:image" content="http://dangchaofeng.github.io/blog/dist/2019/01/02/tcp/img2.png">
+<meta property="og:updated_time" content="2019-01-02T08:10:43.884Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="词悬浮-词汇速记法2">
-<meta name="twitter:description" content="第二堂课笔记 【金字塔排序的意义】：以战养战  【词根】： -nat-(生)  -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）12345678910111">
-<meta name="twitter:image" content="http://dangchaofeng.github.io/blog/dist/2018/12/26/English2/img.jpg">
+<meta name="twitter:title" content="TCP三次握手四次挥手">
+<meta name="twitter:description" content="TCP三次握手四次挥手TCP的状态 (SYN, FIN, ACK, PSH, RST, URG) 在TCP层，有个FLAGS字段，这个字段有以下几个标识：SYN, FIN, ACK, PSH, RST, URG. 其中，对于我们日常的分析有用的就是前面的五个字段。  123456789SYN表示建立连接，FIN表示关闭连接，ACK表示响应，PSH表示有 DATA数据传输，RST表示连接重置。 其中">
+<meta name="twitter:image" content="http://dangchaofeng.github.io/blog/dist/2019/01/02/tcp/img1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://dangchaofeng.github.io/blog/dist/2018/12/26/English2/">
+  <link rel="canonical" href="http://dangchaofeng.github.io/blog/dist/2019/01/02/tcp/">
 
 
 
@@ -132,7 +133,7 @@
   };
 </script>
 
-  <title>词悬浮-词汇速记法2 | 煦千</title>
+  <title>TCP三次握手四次挥手 | 煦千</title>
   
 
 
@@ -335,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2018/12/26/English2/">
+    <link itemprop="mainEntityOfPage" href="http://dangchaofeng.github.io/blog/dist/blog/dist/2019/01/02/tcp/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DangChaofeng">
@@ -352,7 +353,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">词悬浮-词汇速记法2
+          <h1 class="post-title" itemprop="name headline">TCP三次握手四次挥手
 
               
             
@@ -378,24 +379,12 @@
                 
               
 
-              <time title="创建时间：2018-12-26 19:50:03" itemprop="dateCreated datePublished" datetime="2018-12-26T19:50:03+08:00">2018-12-26</time>
+              <time title="创建时间：2019-01-02 14:40:29 / 修改时间：16:10:43" itemprop="dateCreated datePublished" datetime="2019-01-02T14:40:29+08:00">2019-01-02</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-29 15:46:27" itemprop="dateModified" datetime="2018-12-29T15:46:27+08:00">2018-12-29</time>
               
             
           </span>
@@ -412,7 +401,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/dist/categories/tcp连接、断开连接/" itemprop="url" rel="index"><span itemprop="name">tcp连接、断开连接</span></a></span>
 
                 
                 
@@ -424,7 +413,7 @@
 
           
           
-             <span id="/blog/dist/2018/12/26/English2/" class="leancloud_visitors" data-flag-title="词悬浮-词汇速记法2">
+             <span id="/blog/dist/2019/01/02/tcp/" class="leancloud_visitors" data-flag-title="TCP三次握手四次挥手">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -455,151 +444,64 @@
       
 
       
-        <h1 id="第二堂课笔记"><a href="#第二堂课笔记" class="headerlink" title="第二堂课笔记"></a>第二堂课笔记</h1><blockquote>
-<p>【金字塔排序的意义】：以战养战</p>
+        <h2 id="TCP三次握手四次挥手"><a href="#TCP三次握手四次挥手" class="headerlink" title="TCP三次握手四次挥手"></a>TCP三次握手四次挥手</h2><h3 id="TCP的状态-SYN-FIN-ACK-PSH-RST-URG"><a href="#TCP的状态-SYN-FIN-ACK-PSH-RST-URG" class="headerlink" title="TCP的状态 (SYN, FIN, ACK, PSH, RST, URG)"></a>TCP的状态 (SYN, FIN, ACK, PSH, RST, URG)</h3><blockquote>
+<p>在TCP层，有个FLAGS字段，这个字段有以下几个标识：SYN, FIN, ACK, PSH, RST, URG.</p>
+<p>其中，对于我们日常的分析有用的就是前面的五个字段。</p>
 </blockquote>
-<h2 id="【词根】：-nat-生-form-形成"><a href="#【词根】：-nat-生-form-形成" class="headerlink" title="【词根】： -nat-(生)  -form-(形成)"></a>【词根】： -nat-(生)  -form-(形成)</h2><h2 id="【前缀】：（常见30个）"><a href="#【前缀】：（常见30个）" class="headerlink" title="【前缀】：（常见30个）"></a>【前缀】：（常见30个）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">de- 向下，分</span><br><span class="line">inter- 在...之间，互相</span><br><span class="line">trans- 通过，改变</span><br><span class="line">un- 否定</span><br><span class="line"></span><br><span class="line"><span class="keyword">in</span>- 否定，内向，强调，使动</span><br><span class="line">non- 否定</span><br><span class="line">semi- 半</span><br><span class="line">per- 完全</span><br><span class="line">trans- 通过，改变</span><br><span class="line">de- 分，向下</span><br></pre></td></tr></table></figure>
-<h2 id="【后缀】：（常见40个）"><a href="#【后缀】：（常见40个）" class="headerlink" title="【后缀】：（常见40个）"></a>【后缀】：（常见40个）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-er === or 形容词或名词后缀</span><br><span class="line">-ed 形容词、过去式、过去分词</span><br><span class="line">-less 形容词后缀，表否定</span><br><span class="line">-ness 名词后缀</span><br><span class="line">-al 形容词或名词后缀</span><br><span class="line">-ly 副词后缀</span><br><span class="line">-ity 名词后缀，表抽象含义</span><br><span class="line"></span><br><span class="line">-ics 学术名词后缀</span><br><span class="line">-ate 动词或形容词后缀</span><br><span class="line">-ion 名词后缀</span><br><span class="line">-ist 形容词或名词后缀</span><br><span class="line">-ic 形容词或名词后缀</span><br><span class="line">-s 名词后缀，复数名词后缀</span><br><span class="line">-ize 动词后缀，表使动</span><br><span class="line">-ism 名词后缀，表...主义</span><br><span class="line">-ist 名词后缀，表...主义者</span><br><span class="line">-ant 名词或形容词后缀</span><br><span class="line">-ive 名词或形容词后缀</span><br><span class="line">-ance 名词后缀</span><br><span class="line">-ing 形容词、动名词、现在分词</span><br><span class="line">-able 形容词后缀，表能...的</span><br><span class="line">-ation 复合名词后缀</span><br><span class="line">-ure 名词或动词后缀</span><br></pre></td></tr></table></figure>
-<h2 id="【课后练习】："><a href="#【课后练习】：" class="headerlink" title="【课后练习】："></a>【课后练习】：</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">单词</th>
-<th style="text-align:center">前缀1</th>
-<th style="text-align:center">词根1</th>
-<th style="text-align:center">后缀1</th>
-<th style="text-align:center">后缀2</th>
-<th style="text-align:center">后缀3</th>
-<th style="text-align:center">后缀4</th>
-<th style="text-align:center">后缀5</th>
-<th style="text-align:center">含义</th>
-<th>含义备选项（数字填写到’含义栏’）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">formality</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>1、adj.自然主义的</td>
-</tr>
-<tr>
-<td style="text-align:center">denationalization</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>2、n.表演性</td>
-</tr>
-<tr>
-<td style="text-align:center">naturally</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>3、n.国有化</td>
-</tr>
-<tr>
-<td style="text-align:center">formation</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>4、n.变形金刚</td>
-</tr>
-<tr>
-<td style="text-align:center">naturalistic</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>5、n.跨国化</td>
-</tr>
-<tr>
-<td style="text-align:center">transfromational</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>6、n.编队</td>
-</tr>
-<tr>
-<td style="text-align:center">nationalization</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>7、adj.转换的</td>
-</tr>
-<tr>
-<td style="text-align:center">transnationalization</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>8、n.礼节</td>
-</tr>
-<tr>
-<td style="text-align:center">transformer</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>9、n.非国有化</td>
-</tr>
-<tr>
-<td style="text-align:center">performativity</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>10、adv.自然地</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="【听力练习推荐看片】："><a href="#【听力练习推荐看片】：" class="headerlink" title="【听力练习推荐看片】："></a>【听力练习推荐看片】：</h2><p><img src="/blog/dist/2018/12/26/English2/img.jpg" alt="image text"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SYN表示建立连接，</span><br><span class="line"></span><br><span class="line">FIN表示关闭连接，</span><br><span class="line"></span><br><span class="line">ACK表示响应，</span><br><span class="line"></span><br><span class="line">PSH表示有 DATA数据传输，</span><br><span class="line"></span><br><span class="line">RST表示连接重置。</span><br></pre></td></tr></table></figure>
+<p>其中，ACK是可能与SYN，FIN等同时使用的，比如SYN和ACK可能同时为1，它表示的就是建立连接之后的响应，</p>
+<p>如果只是单个的一个SYN，它表示的只是建立连接。</p>
+<p>TCP的几次握手就是通过这样的ACK表现出来的。</p>
+<p>但<code>SYN</code>与<code>FIN</code>是不会同时为1的，因为前者表示的是<code>建立连接</code>，而后者表示的是<code>断开连接</code>。</p>
+<p>RST一般是在FIN之后才会出现为1的情况，表示的是连接重置。</p>
+<p> 一般地，当出现FIN包或RST包时，我们便认为客户端与服务器端断开了连接；而当出现SYN和SYN＋ACK包时，我们认为客户端与服务器建立了一个连接。</p>
+<p>PSH为1的情况，一般只出现在 DATA内容不为0的包中，也就是说PSH为1表示的是有真正的TCP数据包内容被传递。</p>
+<p>TCP的连接建立和连接关闭，都是通过请求－响应的模式完成的。</p>
+<p>概念补充-TCP三次握手：</p>
+<p>TCP(Transmission Control Protocol)传输控制协议</p>
+<p>TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接：</p>
+<p>位码即tcp标志位，有6种标示：</p>
+<p><code>SYN</code>(synchronous建立联机) </p>
+<p><code>ACK</code>(acknowledgement 确认) </p>
+<p><code>PSH</code>(push传送) </p>
+<p><code>FIN</code>(finish结束) </p>
+<p><code>RST</code>(reset重置) </p>
+<p><code>URG</code>(urgent紧急)</p>
+<p><code>Sequence number</code>(顺序号码，用小写<code>seq</code>代替) </p>
+<p><code>Acknowledge number</code>(确认号码，用小写<code>ack</code>代替)</p>
+<h3 id="TCP连接的建立（三次握手）"><a href="#TCP连接的建立（三次握手）" class="headerlink" title="TCP连接的建立（三次握手）"></a>TCP连接的建立（三次握手）</h3><blockquote>
+<p>TCP三次握手如图：</p>
+</blockquote>
+<p><img src="/blog/dist/2019/01/02/tcp/img1.png" alt="img text"></p>
+<ol>
+<li>TCP服务器进程先创建传输控制块TCB，时刻准备接受客户进程的连接请求，此时服务器就进入了LISTEN（监听）状态；</li>
+<li>TCP客户进程也是先创建传输控制块TCB，然后向服务器发出连接请求报文，这是报文首部中的同部位<code>SYN=1</code>，同时选择一个初始序列号 seq=x ，此时，TCP客户端进程进入了 SYN-SENT（同步已发送状态）状态。<font color="red">TCP规定，SYN报文段（<code>SYN=1</code>的报文段）不能携带数据，但需要消耗掉一个序号。</font></li>
+<li>TCP服务器收到请求报文后，如果同意连接，则发出确认报文。确认报文中应该 <code>ACK=1</code>，<code>SYN=1</code>，确认号是ack=x+1，同时也要为自己初始化一个序列号 seq=y，此时，TCP服务器进程进入了SYN-RCVD（同步收到）状态。<font color="red">这个报文也不能携带数据，但是同样要消耗一个序号。</font></li>
+<li>TCP客户进程收到确认后，还要向服务器给出确认。确认报文的<code>ACK=1</code>，ack=y+1，自己的序列号seq=x+1，此时，TCP连接建立，客户端进入ESTABLISHED（已建立连接）状态。<font color="red">TCP规定，ACK报文段可以携带数据，但是如果不携带数据则不消耗序号。</font></li>
+<li>当服务器收到客户端的确认后也进入ESTABLISHED状态，此后双方就可以开始通信了。</li>
+</ol>
+<h3 id="为什么TCP客户端最后还要发送一次确认呢？"><a href="#为什么TCP客户端最后还要发送一次确认呢？" class="headerlink" title="为什么TCP客户端最后还要发送一次确认呢？"></a>为什么TCP客户端最后还要发送一次确认呢？</h3><p>一句话，主要防止已经失效的连接请求报文突然又传送到了服务器，从而产生错误。</p>
+<p>如果使用的是两次握手建立连接，假设有这样一种场景，<font color="blue">客户端发送了第一个请求连接并且没有丢失，只是因为在网络结点中滞留的时间太长了，</font>由于TCP的客户端迟迟没有收到确认报文，以为服务器没有收到，此时重新向服务器发送这条报文，此后客户端和服务器经过两次握手完成连接，传输数据，然后关闭连接。<font color="blue">此时此前滞留的那一次请求连接，网络通畅了到达了服务器，这个报文本该是失效的，但是，两次握手的机制将会让客户端和服务器再次建立连接，这将导致不必要的错误和资源的浪费。</font></p>
+<p>如果采用的是三次握手，就算是<font color="green">那一次失效的报文传送过来了，服务端接受到了那条失效报文并且回复了确认报文，但是客户端不会再次发出确认。</font>由于服务器收不到确认，就知道客户端并没有请求连接。</p>
+<blockquote>
+<p>数据传输完毕后，双方都可释放连接。最开始的时候，客户端和服务器都是处于ESTABLISHED状态，然后客户端主动关闭，服务器被动关闭。tcp四次挥手如图：</p>
+</blockquote>
+<p><img src="/blog/dist/2019/01/02/tcp/img2.png" alt="img text"></p>
+<ol>
+<li>客户端进程发出连接释放报文，并且停止发送数据。释放数据报文首部，FIN=1，其序列号为seq=u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入FIN-WAIT-1（终止等待1）状态。 <font color="red" face="黑体">TCP规定，FIN报文段即使不携带数据，也要消耗一个序号。</font></li>
+<li>服务器收到连接释放报文，发出确认报文，ACK=1，ack=u+1，并且带上自己的序列号seq=v，此时，服务端就进入了CLOSE-WAIT（关闭等待）状态。<font color="red" face="黑体">TCP服务器通知高层的应用进程，客户端向服务器的方向就释放了，这时候处于半关闭状态，即客户端已经没有数据要发送了，但是服务器若发送数据，客户端依然要接受。</font><font color="blue">这个状态还要持续一段时间，也就是整个CLOSE-WAIT状态持续的时间。</font></li>
+<li>客户端收到服务器的确认请求后，此时，客户端就进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文<font color="red">（在这之前还需要接受服务器发送的最后的数据）。</font></li>
+<li>01服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，FIN=1，ack=u+1，由于在半关闭状态，服务器很可能又发送了一些数据，假定此时的序列号为seq=w，此时，服务器就进入了LAST-ACK（最后确认）状态，等待客户端的确认。</li>
+<li>客户端收到服务器的连接释放报文后，必须发出确认，ACK=1，ack=w+1，而自己的序列号是seq=u+1，此时，客户端就进入了TIME-WAIT（时间等待）状态。<font color="red">注意此时TCP连接还没有释放，必须经过2∗∗MSL（最长报文段寿命）的时间后，当客户端撤销相应的TCB后，才进入CLOSED状态。</font></li>
+<li>服务器只要收到了客户端发出的确认，立即进入CLOSED状态。同样，撤销TCB后，就结束了这次的TCP连接。<font color="red">可以看到，服务器结束TCP连接的时间要比客户端早一些。</font></li>
+</ol>
+<h3 id="为什么客户端最后还要等待2MSL？"><a href="#为什么客户端最后还要等待2MSL？" class="headerlink" title="为什么客户端最后还要等待2MSL？"></a>为什么客户端最后还要等待2MSL？</h3><p>MSL（Maximum Segment Lifetime），TCP允许不同的实现可以设置不同的MSL值。</p>
+<p>第一，保证客户端发送的最后一个ACK报文能够到达服务器，因为这个ACK报文可能丢失，<font color="blue">站在服务器的角度看来，我已经发送了FIN+ACK报文请求断开了，客户端还没有给我回应，应该是我发送的请求断开报文它没有收到，于是服务器又会重新发送一次，</font>而客户端就能在这个2MSL时间段内收到这个重传的报文，接着给出回应报文，并且会重启2MSL计时器。</p>
+<p>第二，防止类似与“三次握手”中提到了的“已经失效的连接请求报文段”出现在本连接中。客户端发送完最后一个确认报文后，在这个2MSL时间中，就可以使本连接持续的时间内所产生的所有报文段都从网络中消失。这样新的连接中不会出现旧连接的请求报文。</p>
+<p>为什么建立连接是三次握手，关闭连接确是四次挥手呢？</p>
+<p>建立连接的时候， 服务器在LISTEN状态下，收到建立连接请求的SYN报文后，把ACK和SYN放在一个报文里发送给客户端。 </p>
+<p>而关闭连接时，服务器收到对方的FIN报文时，仅仅表示对方不再发送数据了但是还能接收数据，而自己也未必全部数据都发送给对方了，所以己方可以立即关闭，也可以发送一些数据给对方后，再发送FIN报文给对方来表示同意现在关闭连接，因此，己方ACK和FIN一般都会分开发送，从而导致多了一次。</p>
+<h3 id="如果已经建立了连接，但是客户端突然出现故障了怎么办？"><a href="#如果已经建立了连接，但是客户端突然出现故障了怎么办？" class="headerlink" title="如果已经建立了连接，但是客户端突然出现故障了怎么办？"></a>如果已经建立了连接，但是客户端突然出现故障了怎么办？</h3><p>TCP还设有一个<code>保活计时器</code>，显然，客户端如果出现故障，服务器不能一直等下去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时器，<font color="blue">时间通常是设置为2小时</font>，若两小时还没有收到客户端的任何数据，服务器就会发送一个<font color="blue">探测报文段，以后每隔75秒发送一次</font>。若一连发送10个探测报文仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。</p>
 
       
     </div>
@@ -623,7 +525,7 @@
       
         <div class="post-tags">
           
-            <a href="/blog/dist/tags/English/" rel="tag"># English</a>
+            <a href="/blog/dist/tags/tcp连接、断开连接/" rel="tag"># tcp连接、断开连接</a>
           
         </div>
       
@@ -636,8 +538,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/dist/2018/12/26/npm-command/" rel="next" title="npm常用命令">
-                <i class="fa fa-chevron-left"></i> npm常用命令
+              <a href="/blog/dist/2019/01/02/vue/" rel="next" title="vue的双向绑定">
+                <i class="fa fa-chevron-left"></i> vue的双向绑定
               </a>
             
           </div>
@@ -645,10 +547,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/dist/2018/12/26/English/" rel="prev" title="词悬浮-词汇速记法1">
-                词悬浮-词汇速记法1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -837,7 +735,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第二堂课笔记"><span class="nav-number">1.</span> <span class="nav-text">第二堂课笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#【词根】：-nat-生-form-形成"><span class="nav-number">1.1.</span> <span class="nav-text">【词根】： -nat-(生)  -form-(形成)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#【前缀】：（常见30个）"><span class="nav-number">1.2.</span> <span class="nav-text">【前缀】：（常见30个）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#【后缀】：（常见40个）"><span class="nav-number">1.3.</span> <span class="nav-text">【后缀】：（常见40个）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#【课后练习】："><span class="nav-number">1.4.</span> <span class="nav-text">【课后练习】：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#【听力练习推荐看片】："><span class="nav-number">1.5.</span> <span class="nav-text">【听力练习推荐看片】：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP三次握手四次挥手"><span class="nav-number">1.</span> <span class="nav-text">TCP三次握手四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP的状态-SYN-FIN-ACK-PSH-RST-URG"><span class="nav-number">1.1.</span> <span class="nav-text">TCP的状态 (SYN, FIN, ACK, PSH, RST, URG)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接的建立（三次握手）"><span class="nav-number">1.2.</span> <span class="nav-text">TCP连接的建立（三次握手）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么TCP客户端最后还要发送一次确认呢？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么TCP客户端最后还要发送一次确认呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么客户端最后还要等待2MSL？"><span class="nav-number">1.4.</span> <span class="nav-text">为什么客户端最后还要等待2MSL？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果已经建立了连接，但是客户端突然出现故障了怎么办？"><span class="nav-number">1.5.</span> <span class="nav-text">如果已经建立了连接，但是客户端突然出现故障了怎么办？</span></a></li></ol></li></ol></div>
             
 
           </div>
