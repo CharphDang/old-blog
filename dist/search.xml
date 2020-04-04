@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[protractor]]></title>
+    <url>%2Fblog%2Fdist%2F2020%2F04%2F04%2Fprotractor%2F</url>
+    <content type="text"><![CDATA[protractor]]></content>
+      <categories>
+        <category>protractor</category>
+      </categories>
+      <tags>
+        <tag>e2e</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[grunt]]></title>
     <url>%2Fblog%2Fdist%2F2019%2F08%2F27%2Fgrunt%2F</url>
     <content type="text"><![CDATA[grunt 安装环境 npm init -y grunt npm install grunt --save-dev grunt-cli npm install grunt-cli -g, 这里我是全局安装grunt-cli 配置文件 在package.json同级目录下，创建Gruntfile.js文件 123module.exports = function(grunt) &#123; // Do grunt-related things in here&#125;; 为工程增加babel转义功能 为何要这么做？ 由于现代浏览器对es6+的语法支持度不够高，对于…解构、async/await 等无法识别，所以需要将我们的代码编译为浏览器认识的代码（方便我们使用最新的语法去编写代码，使代码更清晰明了高大上） 安装依赖 npm install --save-dev grunt-babel @babel/core npm install @babel/preset-env --save-dev 配置文件 Gruntfile.js 1234567891011121314151617181920212223242526require("load-grunt-tasks")(grunt); // npm install --save-dev load-grunt-tasksgrunt.initConfig(&#123; "babel": &#123; options: &#123; sourceMap: false, presets: [ [ '@babel/preset-env', &#123; targets: &#123; browsers: ['&gt; 1%', 'last 2 versions', 'not ie &lt;= 8'] &#125; &#125; ] ] &#125;, dist: &#123; files: &#123; "dist/app.js": "src/app.js" &#125; &#125; &#125;&#125;);grunt.registerTask("default", ["babel"]); 1grunt.loadNpmTasks(&apos;grunt-babel&apos;); - `@babel/core` 是实际用来转义es6+代码的 - `@babel/preset-env`是做转义预设，指定转义规则的 为环境增加全局变量babel-polyfill 为何要这样做？ 当babel转义后，其实还有一些东西无法转义，比如es6+中的全局变量中的Promise, Object.assign()方法等，这就需要我们对当前环境进行一个polyfill，填充他们缺少的功能。（如果不填充，浏览器如果不认识Promise，那肯定运行的时候报错噻） 安装依赖 npm install --save-dev @babel/polyfill 配置文件 Gruntfile.js 12345678910111213presets: [ [ '@babel/preset-env', &#123; targets: &#123; browsers: ['&gt; 1%', 'last 2 versions', 'not ie &lt;= 8'] &#125;, modules: 'commonjs', // 选项用于模块转化规则设置，可选配置包括："amd" | "umd" | "systemjs" | "commonjs" | false, 默认使用 "commonjs"。即，将代码中的ES6的import转为require。 corejs: '3', // 声明corejs版本 useBuiltIns: 'usage' // 不用显示引用@babel/polyfill &#125; ] ] 为环境增加browserify功能 为何这样做 我们会发现babel转义出来的代码里面，会有require()/import语法，这都是引入的polyfill，但是浏览器不认识require() 这种commonJs 的CMD语法，也不认识import/exports 等语法，必须转换为浏览器认识的。 browserify默认是将require进行转换。 对前端define的转换还不知道怎么配置。 安装依赖 npm install --save-dev browserify npm install --save-dev grunt-browserify 配置文件 Gruntfile.js 12345678910111213// 让浏览器适配require(commonJS,CMD) browserify: &#123; dist: &#123; files: [ &#123; expand: true, src: ['**/*.js'], //所有js文件 dest: tmpDirBabel, //输出到此目录下 cwd: tmpDirBabel //js目录下 &#125; ] &#125; &#125; 1grunt.loadNpmTasks(&apos;grunt-browserify&apos;); 配置压缩功能 为何这样做？ js文件进行压缩体积，优化方向 安装依赖 npm install grunt-contrib-uglify --save-dev 配置文件 Gruntfile.js 1234567891011121314151617// 自定义压缩 uglify: &#123; options: &#123; mangle: true, //混淆变量名 comments: 'false' //false（删除全部注释），some（保留@preserve @license @cc_on等注释） &#125;, uglifyFile: &#123; files: [ &#123; expand: true, src: ['**/*.js'], //所有js文件 dest: tmpDirBabel, //输出到此目录下 cwd: tmpDirBabel //js目录下 &#125; ] &#125; &#125; 1grunt.loadNpmTasks('grunt-contrib-uglify'); 配置监听 为何这么做？ 当文件发生更改时，需要做的一些任务，通常配置dev环境，比如less的编译， 本地js的转义等 安装依赖 npm install grunt-contrib-watch grunt-contrib-livereload --save-dev 配置文件 Gruntfile.js 123456789101112131415161718192021watch: &#123; js: &#123; files: ['localApp/**/*.js'], //所有js tasks: [ 'babel', 'browserify' ], options: &#123; interrupt: true, // 如果文件再次更改，则停止上一次的任务，重新构建新的 livereload: true &#125; &#125;, others: &#123; files: ['localApp/**/*', '!localApp/**/*.js'], // 除了js tasks: ['copy:copyOthersToWebApp'], options: &#123; interrupt: true, livereload: true &#125; &#125; &#125; 12grunt.loadNpmTasks('grunt-contrib-watch');grunt.loadNpmTasks('grunt-contrib-livereload'); 加载npm任务 1grunt.loadNpmTasks('grunt-babel'); 注册自定义任务 1grunt.registerTask('dev', ['watch']);]]></content>
@@ -86,9 +97,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[词悬浮-词汇速记法1]]></title>
-    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish%2F</url>
-    <content type="text"><![CDATA[第一堂课笔记【词根】： -elect-(采集) -press-(压力)【前缀】：（常见30个）12345678910111213141516e- 向外un- 否定self- 自己col- 在一起，强调se- 分neg- 否定over- 在上，超过de- 向下，分im- 向内，否定，强调ex- 向外un- 否定anti- 反com- 在一起re- 往回，再次i??- 否定 【后缀】：（常见40个）12345678910111213141516171819202122-or === -er 名词或形容词后缀-ed 形容词或过去式或过去分词-al 形容词或名词后缀-ant 名词或形容词后缀-ation 复合名词后缀-ic 形容词或名词后缀-ive 形容词或名词后缀-ist 名词或形容词后缀-ing 形容词或动名词或现在分词-ion 名词后缀-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ity 名词后缀，表抽象事物-ize 动词后缀，表使动-ible 形容词后缀，表能...的-ful 形容词后缀-ure 名词或动词后缀-ly 副词后缀-less 形容词后缀，表否定-ness 名词后缀 【课后练习】： 单词 前缀 2 前缀1 词根1 后缀1 后缀2 含义 含义备选项（数字填写到’含义栏’） pressurized 1、adj.抗抑郁的 impressionism 2、n.选举 expressiveness 3、vt.使减压 unselected 4、n.压缩性 antidepressant 5、n.表情丰富 collectivism 6、adj.未选择的 neglectful 7、adj.加压的 election 8、n.印象主义 depressurize 9、adj.疏忽的 compressibility 10、n.集体主义]]></content>
+    <title><![CDATA[词悬浮-词汇速记法2]]></title>
+    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish2%2F</url>
+    <content type="text"><![CDATA[第二堂课笔记 【金字塔排序的意义】：以战养战 【词根】： -nat-(生) -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）123456789101112131415161718192021222324-er === or 形容词或名词后缀-ed 形容词、过去式、过去分词-less 形容词后缀，表否定-ness 名词后缀-al 形容词或名词后缀-ly 副词后缀-ity 名词后缀，表抽象含义-ics 学术名词后缀-ate 动词或形容词后缀-ion 名词后缀-ist 形容词或名词后缀-ic 形容词或名词后缀-s 名词后缀，复数名词后缀-ize 动词后缀，表使动-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ant 名词或形容词后缀-ive 名词或形容词后缀-ance 名词后缀-ing 形容词、动名词、现在分词-able 形容词后缀，表能...的-ation 复合名词后缀-ure 名词或动词后缀 【课后练习】： 单词 前缀1 词根1 后缀1 后缀2 后缀3 后缀4 后缀5 含义 含义备选项（数字填写到’含义栏’） formality 1、adj.自然主义的 denationalization 2、n.表演性 naturally 3、n.国有化 formation 4、n.变形金刚 naturalistic 5、n.跨国化 transfromational 6、n.编队 nationalization 7、adj.转换的 transnationalization 8、n.礼节 transformer 9、n.非国有化 performativity 10、adv.自然地 【听力练习推荐看片】：]]></content>
       <categories>
         <category>English</category>
       </categories>
@@ -97,9 +108,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[词悬浮-词汇速记法2]]></title>
-    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish2%2F</url>
-    <content type="text"><![CDATA[第二堂课笔记 【金字塔排序的意义】：以战养战 【词根】： -nat-(生) -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）123456789101112131415161718192021222324-er === or 形容词或名词后缀-ed 形容词、过去式、过去分词-less 形容词后缀，表否定-ness 名词后缀-al 形容词或名词后缀-ly 副词后缀-ity 名词后缀，表抽象含义-ics 学术名词后缀-ate 动词或形容词后缀-ion 名词后缀-ist 形容词或名词后缀-ic 形容词或名词后缀-s 名词后缀，复数名词后缀-ize 动词后缀，表使动-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ant 名词或形容词后缀-ive 名词或形容词后缀-ance 名词后缀-ing 形容词、动名词、现在分词-able 形容词后缀，表能...的-ation 复合名词后缀-ure 名词或动词后缀 【课后练习】： 单词 前缀1 词根1 后缀1 后缀2 后缀3 后缀4 后缀5 含义 含义备选项（数字填写到’含义栏’） formality 1、adj.自然主义的 denationalization 2、n.表演性 naturally 3、n.国有化 formation 4、n.变形金刚 naturalistic 5、n.跨国化 transfromational 6、n.编队 nationalization 7、adj.转换的 transnationalization 8、n.礼节 transformer 9、n.非国有化 performativity 10、adv.自然地 【听力练习推荐看片】：]]></content>
+    <title><![CDATA[词悬浮-词汇速记法1]]></title>
+    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish%2F</url>
+    <content type="text"><![CDATA[第一堂课笔记【词根】： -elect-(采集) -press-(压力)【前缀】：（常见30个）12345678910111213141516e- 向外un- 否定self- 自己col- 在一起，强调se- 分neg- 否定over- 在上，超过de- 向下，分im- 向内，否定，强调ex- 向外un- 否定anti- 反com- 在一起re- 往回，再次i??- 否定 【后缀】：（常见40个）12345678910111213141516171819202122-or === -er 名词或形容词后缀-ed 形容词或过去式或过去分词-al 形容词或名词后缀-ant 名词或形容词后缀-ation 复合名词后缀-ic 形容词或名词后缀-ive 形容词或名词后缀-ist 名词或形容词后缀-ing 形容词或动名词或现在分词-ion 名词后缀-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ity 名词后缀，表抽象事物-ize 动词后缀，表使动-ible 形容词后缀，表能...的-ful 形容词后缀-ure 名词或动词后缀-ly 副词后缀-less 形容词后缀，表否定-ness 名词后缀 【课后练习】： 单词 前缀 2 前缀1 词根1 后缀1 后缀2 含义 含义备选项（数字填写到’含义栏’） pressurized 1、adj.抗抑郁的 impressionism 2、n.选举 expressiveness 3、vt.使减压 unselected 4、n.压缩性 antidepressant 5、n.表情丰富 collectivism 6、adj.未选择的 neglectful 7、adj.加压的 election 8、n.印象主义 depressurize 9、adj.疏忽的 compressibility 10、n.集体主义]]></content>
       <categories>
         <category>English</category>
       </categories>
