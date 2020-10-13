@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="煦千">
 <meta property="og:description" content="设计模式 细节分类   【发布订阅模式】vue 中的实现$on,$emit,$off 【单例模式】errorDialog 可以使用进行优化 【策略模式】vue 中的 form rule，配置化使用，map 结构提供策略可配置，环境类的去调用 map 中的实际方案（value）去执行，Monitor 校验配置使用的 { key: ()=&amp;gt;{} }   【代理模式】防抖节流， Proxy, de">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-22T13:42:40.852Z">
+<meta property="og:updated_time" content="2020-10-13T12:08:54.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="design-patterns">
 <meta name="twitter:description" content="设计模式 细节分类   【发布订阅模式】vue 中的实现$on,$emit,$off 【单例模式】errorDialog 可以使用进行优化 【策略模式】vue 中的 form rule，配置化使用，map 结构提供策略可配置，环境类的去调用 map 中的实际方案（value）去执行，Monitor 校验配置使用的 { key: ()=&amp;gt;{} }   【代理模式】防抖节流， Proxy, de">
@@ -424,7 +424,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-09-22 21:42:40" itemprop="dateModified" datetime="2020-09-22T21:42:40+08:00">2020-09-22</time>
+                <time title="修改时间：2020-10-13 20:08:54" itemprop="dateModified" datetime="2020-10-13T20:08:54+08:00">2020-10-13</time>
               
             
           </span>
@@ -514,21 +514,57 @@
 <li>创建型设计模式<ul>
 <li>构造器模式</li>
 <li>原型模式</li>
-<li>工厂模式</li>
+<li>工厂模式<ul>
+<li>提供一个接口实现创建，接口内部才是调用new Class()</li>
+</ul>
+</li>
+<li>abstract factory 抽象工厂<ul>
+<li>内部的class可以通过接口进行注册</li>
+</ul>
+</li>
 <li>单例模式</li>
-<li>module模式</li>
+<li>prototype模式<ul>
+<li>object.create(obj, {}) 实际原理是函数委托给别人</li>
+</ul>
+</li>
+<li>module模式<ul>
+<li>闭包自执行函数，暴露一个变量给外部使用，通过变量来操作内部私有属性</li>
+</ul>
+</li>
 <li>抽象模式</li>
 <li>生成器模式（可以理解为一个生成器中包含了多个类的实例化，复杂化后的工厂模式）</li>
 </ul>
 </li>
 <li>结构型设计模式（专注类和对象的组合）<ul>
-<li>代理模式</li>
-<li>外观模式</li>
+<li>代理模式<ul>
+<li>提供一个代理者去帮助你操作实际的内容，代理者会考虑容错场景，提供备选方案(loading 图片的展示，等实际加载完图片，再切换新的src)</li>
+</ul>
+</li>
+<li>外观模式<ul>
+<li>外部调用统一，内部实现进行判断兼容性</li>
+</ul>
+</li>
+<li>Command（命令）模式<ul>
+<li>通过不同的命令（传参）做不同的事情，常含有（关联）接收者</li>
+<li>execute(‘requestInfo’, ‘Ford Mondeo’, ‘321’)</li>
+<li>execute(‘buyVehicle’, ‘Ford Escort’, ‘789’)</li>
+</ul>
+</li>
+<li>Facade（外观）模式</li>
+<li>Mixin模式<ul>
+<li>类似于extend, merge等函数，将两个对象的key合并成一个，重复的以优先级进行覆盖</li>
+</ul>
+</li>
+<li>Decorator（装饰器）模式</li>
+<li>Flyweight（享元）模式</li>
 </ul>
 </li>
 <li>行为设计模式<ul>
 <li>观察者（发布订阅者模式） 关注对象之间的通信</li>
-<li>策略模式</li>
+<li>策略模式<ul>
+<li>不同的算法做同一件事情</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
