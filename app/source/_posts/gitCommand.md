@@ -5,7 +5,7 @@ tags:
 - git
 categories:
 - git
-categories:
+comments: false
 ---
 
 # git command

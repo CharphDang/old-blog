@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[gitCommand]]></title>
+    <url>%2Fblog%2Fdist%2F2021%2F01%2F07%2FgitCommand%2F</url>
+    <content type="text"><![CDATA[git command可以观看廖雪峰大神写的git教程 git init 初始化一个git仓库 git remote add origin &lt;git@server-name:path/repo-name.git&gt; 关联远程库 git clone 克隆 git checkout -b &lt;name&gt; or git switch -c &lt;name&gt; 检出分支pr-branch并切换到新分支上 git checkout -b &lt;new-branch&gt; origin/&lt;remote-branch&gt; 检出远程分支remote-branch到本地，命名为new-branch git commit 本地提交 git pull 远程更新拉到本地 git push 本地推送到远程 git merge c2 把c2 branch 内容合并到当前分支上 git rebase c2 将c2分支最新的提交同步到当前分支，并变成线性提交 git checkout c2^ 分离HEAD，让其指向c2的父级 git checkout c2~2 让其指向c2的父级的父级 git branch -f c2 HEAD~2 将分支c2重新分配给当前分支的父级的父级 git reset HEAD~1 将当前分支向后移到较早的提交上来恢复更改 git revert HEAD 重写当前分支，把上次的提交，反转过来再次提交， 来恢复之前的更改 git push -u origin master 将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了 git pull 相当于git fetch, git merge git pull --rebase 相当于git fetch , git rebase ，本地就不会出现提交分叉以及万恶的merge commit信息 rebase 好处 想要更好的提交树，使用rebase操作会更好一点。 这样可以线性的看到每一次提交，并且没有增加提交节点。 merge 操作遇到冲突的时候，当前merge不能继续进行下去。手动修改冲突内容后，add 修改，commit 就可以了。 而rebase 操作的话，会中断rebase,同时会提示去解决冲突。 解决冲突后,将修改add后执行git rebase –continue继续操作，或者git rebase –skip忽略冲突。 git stash 储藏现场工作（将git仓库已经追踪记录的，但是没有commit的东西先存起来） git stash list 查看储藏区 git stash apply stash@{0} 恢复储藏区， 不会删除储藏区的内容，等待commit git stash pop 恢复储藏区， 同时会删除储藏区的内容，等待commit git stash drop stash@{0} 删除储藏区的内容 git cherry-pick 4c805e2 复制一个特定的提交到当前分支 git tag &lt;tagname&gt; ? &lt;commit ID&gt; 用于新建一个标签，默认为HEAD，也可以指定一个commit id git tag -a &lt;tagname&gt; -m &quot;This is a tag&quot; 可以指定标签信息 git tag 查看所有标签 git show &lt;tagname&gt; 查看一个标签 git tag -d &lt;tagname&gt; 删除一个标签 git push origin &lt;tagname&gt; 推送一个本地标签 到 远程 git push origin --tags 推送全部未推送过的本地标签 git push origin :refs/tags/&lt;tagname&gt; 删除一个远程标签]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[webdriverio-cucumber]]></title>
     <url>%2Fblog%2Fdist%2F2020%2F10%2F20%2Fwebdriverio-cucumber%2F</url>
     <content type="text"><![CDATA[webdriverIO-cucumber博客地址 【直接下载，npm install ， npm run test 即可快速开始进入demo code】 本用例使用的是webdriverIo基本的cli架构，然后自定义使用cucumber来进行e2e的语法定义以及文档输出。 开场提示： 对node有版本要求， 10.14.0+ 如果chromDriver下载失败，可能就需要翻墙了 案例中的网址，是需要翻墙才能访问的 webdriverio参考 cucumber基本语法入门 Expect强烈建议使用webdriverio内置的，不需要额外加载chai的断言库，因为这是e2e基于浏览器的实现，很多基于DOM操作的内容，使用内置的更加方便合理，使用chai反而增加了复杂度 为何不使用selenium-standalone-service 其一：个人学习使用的话，本地基于chromedriver浏览器足以 其二：selenium-standalone-service 启动的时候，会比webdriver卡很多(也有可能是本人电脑配置过低导致，但总体来说，个人练习足够) 什么时候使用selenium-standalone-service 当你真正项目中使用e2e的时候，selenium-standalone提供良好浏览器的支持。 ChromeDriver FirefoxDriver IEDriver Edge WebDriver Chromium Edge WebDriver 你也可以根据公司的实际需求使用其他的service,eg: sauce 为什么使用cucumber 来看看最最简单的实用语法示例 1234567Feature: Login Feature Scenario: My Login application Given I open my loginpage When I login into my account Then Something is exit 上面可以看出，语法的三大要素很明确 Given 给定一个初始场景 When 给定一个条件 Then 开始进行结果断言 这就是理由！]]></content>
@@ -123,9 +134,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[词悬浮-词汇速记法2]]></title>
-    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish2%2F</url>
-    <content type="text"><![CDATA[第二堂课笔记 【金字塔排序的意义】：以战养战 【词根】： -nat-(生) -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）123456789101112131415161718192021222324-er === or 形容词或名词后缀-ed 形容词、过去式、过去分词-less 形容词后缀，表否定-ness 名词后缀-al 形容词或名词后缀-ly 副词后缀-ity 名词后缀，表抽象含义-ics 学术名词后缀-ate 动词或形容词后缀-ion 名词后缀-ist 形容词或名词后缀-ic 形容词或名词后缀-s 名词后缀，复数名词后缀-ize 动词后缀，表使动-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ant 名词或形容词后缀-ive 名词或形容词后缀-ance 名词后缀-ing 形容词、动名词、现在分词-able 形容词后缀，表能...的-ation 复合名词后缀-ure 名词或动词后缀 【课后练习】： 单词 前缀1 词根1 后缀1 后缀2 后缀3 后缀4 后缀5 含义 含义备选项（数字填写到’含义栏’） formality 1、adj.自然主义的 denationalization 2、n.表演性 naturally 3、n.国有化 formation 4、n.变形金刚 naturalistic 5、n.跨国化 transfromational 6、n.编队 nationalization 7、adj.转换的 transnationalization 8、n.礼节 transformer 9、n.非国有化 performativity 10、adv.自然地 【听力练习推荐看片】：]]></content>
+    <title><![CDATA[词悬浮-词汇速记法1]]></title>
+    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish%2F</url>
+    <content type="text"><![CDATA[第一堂课笔记【词根】： -elect-(采集) -press-(压力)【前缀】：（常见30个）12345678910111213141516e- 向外un- 否定self- 自己col- 在一起，强调se- 分neg- 否定over- 在上，超过de- 向下，分im- 向内，否定，强调ex- 向外un- 否定anti- 反com- 在一起re- 往回，再次i??- 否定 【后缀】：（常见40个）12345678910111213141516171819202122-or === -er 名词或形容词后缀-ed 形容词或过去式或过去分词-al 形容词或名词后缀-ant 名词或形容词后缀-ation 复合名词后缀-ic 形容词或名词后缀-ive 形容词或名词后缀-ist 名词或形容词后缀-ing 形容词或动名词或现在分词-ion 名词后缀-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ity 名词后缀，表抽象事物-ize 动词后缀，表使动-ible 形容词后缀，表能...的-ful 形容词后缀-ure 名词或动词后缀-ly 副词后缀-less 形容词后缀，表否定-ness 名词后缀 【课后练习】： 单词 前缀 2 前缀1 词根1 后缀1 后缀2 含义 含义备选项（数字填写到’含义栏’） pressurized 1、adj.抗抑郁的 impressionism 2、n.选举 expressiveness 3、vt.使减压 unselected 4、n.压缩性 antidepressant 5、n.表情丰富 collectivism 6、adj.未选择的 neglectful 7、adj.加压的 election 8、n.印象主义 depressurize 9、adj.疏忽的 compressibility 10、n.集体主义]]></content>
       <categories>
         <category>English</category>
       </categories>
@@ -134,9 +145,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[词悬浮-词汇速记法1]]></title>
-    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish%2F</url>
-    <content type="text"><![CDATA[第一堂课笔记【词根】： -elect-(采集) -press-(压力)【前缀】：（常见30个）12345678910111213141516e- 向外un- 否定self- 自己col- 在一起，强调se- 分neg- 否定over- 在上，超过de- 向下，分im- 向内，否定，强调ex- 向外un- 否定anti- 反com- 在一起re- 往回，再次i??- 否定 【后缀】：（常见40个）12345678910111213141516171819202122-or === -er 名词或形容词后缀-ed 形容词或过去式或过去分词-al 形容词或名词后缀-ant 名词或形容词后缀-ation 复合名词后缀-ic 形容词或名词后缀-ive 形容词或名词后缀-ist 名词或形容词后缀-ing 形容词或动名词或现在分词-ion 名词后缀-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ity 名词后缀，表抽象事物-ize 动词后缀，表使动-ible 形容词后缀，表能...的-ful 形容词后缀-ure 名词或动词后缀-ly 副词后缀-less 形容词后缀，表否定-ness 名词后缀 【课后练习】： 单词 前缀 2 前缀1 词根1 后缀1 后缀2 含义 含义备选项（数字填写到’含义栏’） pressurized 1、adj.抗抑郁的 impressionism 2、n.选举 expressiveness 3、vt.使减压 unselected 4、n.压缩性 antidepressant 5、n.表情丰富 collectivism 6、adj.未选择的 neglectful 7、adj.加压的 election 8、n.印象主义 depressurize 9、adj.疏忽的 compressibility 10、n.集体主义]]></content>
+    <title><![CDATA[词悬浮-词汇速记法2]]></title>
+    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish2%2F</url>
+    <content type="text"><![CDATA[第二堂课笔记 【金字塔排序的意义】：以战养战 【词根】： -nat-(生) -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）123456789101112131415161718192021222324-er === or 形容词或名词后缀-ed 形容词、过去式、过去分词-less 形容词后缀，表否定-ness 名词后缀-al 形容词或名词后缀-ly 副词后缀-ity 名词后缀，表抽象含义-ics 学术名词后缀-ate 动词或形容词后缀-ion 名词后缀-ist 形容词或名词后缀-ic 形容词或名词后缀-s 名词后缀，复数名词后缀-ize 动词后缀，表使动-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ant 名词或形容词后缀-ive 名词或形容词后缀-ance 名词后缀-ing 形容词、动名词、现在分词-able 形容词后缀，表能...的-ation 复合名词后缀-ure 名词或动词后缀 【课后练习】： 单词 前缀1 词根1 后缀1 后缀2 后缀3 后缀4 后缀5 含义 含义备选项（数字填写到’含义栏’） formality 1、adj.自然主义的 denationalization 2、n.表演性 naturally 3、n.国有化 formation 4、n.变形金刚 naturalistic 5、n.跨国化 transfromational 6、n.编队 nationalization 7、adj.转换的 transnationalization 8、n.礼节 transformer 9、n.非国有化 performativity 10、adv.自然地 【听力练习推荐看片】：]]></content>
       <categories>
         <category>English</category>
       </categories>
