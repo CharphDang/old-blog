@@ -8,8 +8,6 @@ categories:
 comments: false
 ---
 
-# git command
-
 [可以观看廖雪峰大神写的git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
 *   `git init`
