@@ -1,5 +1,5 @@
 ---
-title: gitCommand
+title: git 常用命令
 date: 2021-01-07 20:07:44
 tags: 
 - git
