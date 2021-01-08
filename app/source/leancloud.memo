@@ -24,4 +24,5 @@
 {"title":"git 常用命令","url":"/blog/dist/2021/01/07/gitCommand/"},
 {"title":"Koa","url":"/blog/dist/2021/01/08/Koa/"},
 {"title":"TDD","url":"/blog/dist/2021/01/08/TDD/"},
+{"title":"如何给无网的服务器linux环境安装nodeJs","url":"/blog/dist/2021/01/08/no-network-linux-install-nodeJs/"},
 ]
