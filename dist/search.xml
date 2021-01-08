@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Koa]]></title>
+    <url>%2Fblog%2Fdist%2F2021%2F01%2F08%2FKoa%2F</url>
+    <content type="text"><![CDATA[Koa 是一个简单好用的Web框架，属于node服务器的层面语言技术。 此文默认当前已有node环境，如果你没有node环境，请自行安装 12$ node -vv14.15.0 本地新建一个空目录，进行依赖的安装 12npm init -ynpm i koa2 koa-router koa-static -S 搭建http服务 12345// base.jsconst Koa = require('koa2');const app = new Koa();app.listen(3000); 运行这个脚本，node base.js 然后在浏览器中输入localhost:3000， 你就会看到页面提示”Not Found”， 这就已经启动起来了。 建立静态页面，并使用koa-static来加载 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071// index.html&lt;html&gt; &lt;head&gt; &lt;meta charset="UTF-8" /&gt; &lt;meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" /&gt; &lt;script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"&gt;&lt;/script&gt; &lt;script src="https://cdn.bootcdn.net/ajax/libs/axios/0.20.0-0/axios.js"&gt;&lt;/script&gt; &lt;script src="https://cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.js"&gt;&lt;/script&gt; &lt;style&gt; /* .cube-btn &#123; margin: 10px 0; &#125; */ &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id="app"&gt; &lt;div&gt;&#123;&#123;name&#125;&#125; : &#123;&#123;age&#125;&#125;&lt;/div&gt; &lt;button @click="getTokens"&gt;getTokens&lt;/button&gt; &lt;button @click="setTokens"&gt;setTokens&lt;/button&gt; &lt;button @click="noAPI"&gt;noAPI&lt;/button&gt; &lt;button @click="redirect"&gt;redirect&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el: '#app', data() &#123; return &#123; name: 'dangchaofeng', age: '28' &#125;; &#125;, methods: &#123; async getTokens() &#123; const res = await axios.get(`/getTokens`); console.log('res', res); &#125;, async setTokens() &#123; const res = await axios.post(`/setTokens`); console.log('res', res); &#125;, async redirect() &#123; const res = await axios.get(`/redirect`); console.log('res', res); &#125;, async noAPI() &#123; const res = await axios.delete(`/noAPI`, &#123; params: &#123; id: ' 1' &#125; &#125;); console.log('res', res); &#125; &#125;, mounted: function () &#123;&#125; &#125;); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt;// base-static.jsconst Koa = require('koa2');const app = new Koa();const static = require('koa-static');const path = require('path');const main = static(path.join(__dirname));app.use(main);app.listen(3000); 运行这个脚本，node base-static.js 然后在浏览器中输入localhost:3000， 你就会看到自己的页面。 加载koa-router路由功能 123456789101112131415161718192021222324252627282930313233343536// base-router.jsconst Koa = require('koa2');const Router = require('koa-router');const static = require('koa-static');const path = require('path');const app = new Koa();const router = new Router();router.get('/getTokens', ctx =&gt; &#123; ctx.body = &#123; token: '123' &#125;;&#125;);router.post('/setTokens', ctx =&gt; &#123; ctx.body = &#123; success: true &#125;;&#125;);router.post('/noAPI', ctx =&gt; &#123; ctx.body = &#123; success: true &#125;;&#125;);app.use(static(path.join(__dirname)));// 启用路由app.use(router.routes());// * 自动识别405等返回。// * /noAPI , 只有post ，没有 delete方法，页面触发delete，就会直接405app.use(router.allowedMethods());app.listen(3000); 此处强调说明三点： router是用的restful api app.use(router.routes()); 此句的作用就是启用路由，将路由这个中间件加载给koa app.use(router.allowedMethods()); 此句的作用，是让路由自动识别方法，例如你的接口只实现了get方法，没有对应的post,put,delete方法，那么当你从页面上访问并没有定义的方法时，正常情况会识别到404返回，如果加载这个中间件，那么它会识别为405，表示你不允许这个方法操作 重定向 // ctx.redirect(&#39;getTokens&#39;); 会产生302 的状态码 12345678910111213141516171819202122232425262728293031323334353637383940414243// base-redirect.js/* * @Author: Adam Dang * @Description: 重定向路由 * @Date: 2021-01-08 14:25:38 * @LastEditors: Adam Dang * @LastEditTime: 2021-01-08 14:25:38 */const Koa = require('koa2');const Router = require('koa-router');const static = require('koa-static');const path = require('path');const app = new Koa();const router = new Router();router.get('/getTokens', ctx =&gt; &#123; ctx.body = &#123; token: '123' &#125;;&#125;);router.post('/setTokens', ctx =&gt; &#123; ctx.body = &#123; success: true &#125;;&#125;);// 重定向到其他url上router.get('/redirect', ctx =&gt; &#123; ctx.redirect('/getTokens');&#125;);app.use(static(path.join(__dirname)));// 启用路由app.use(router.routes());// * 自动识别405等返回。// * /noAPI , 只有post ，没有 delete方法，页面触发delete，就会直接405app.use(router.allowedMethods());app.listen(3000); 通过监听error 事件处理错误 ctx.throw(500); app.on(&#39;error&#39;,(err, ctx)=&gt;{ // handle }) 12345678910111213141516171819202122232425262728293031323334// base-handleError.jsconst Koa = require('koa2');const Router = require('koa-router');const static = require('koa-static');const path = require('path');const app = new Koa();const router = new Router();router.get('/getTokens', ctx =&gt; &#123; ctx.throw(500); // ctx.body = &#123; // token: '123' // &#125;;&#125;);router.post('/setTokens', ctx =&gt; &#123; ctx.body = &#123; success: true &#125;;&#125;);app.use(static(path.join(__dirname)));// 启用路由app.use(router.routes());app.use(router.allowedMethods());// 错误处理app.on('error', (err, ctx) =&gt; &#123; console.error('server error', err);&#125;);app.listen(3000);]]></content>
+      <categories>
+        <category>node</category>
+        <category>koa</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+        <tag>koa</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TDD]]></title>
+    <url>%2Fblog%2Fdist%2F2021%2F01%2F08%2FTDD%2F</url>
+    <content type="text"><![CDATA[传统开发 primitive 流程不清晰 反复确认 人力沟通成本大 代码难以维护 测试驱动开发 test-driven development(TDD) 先确定需求 再确定验收标准 编写test 编写业务代码 run test submit code 这里需要说明一下， 在当下2021年，TDD模式被coder们更偏向为开发完之后再开发 e2e, unit test来测试自己的代码运行。]]></content>
+      <categories>
+        <category>TDD</category>
+      </categories>
+      <tags>
+        <tag>TDD</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git 常用命令]]></title>
     <url>%2Fblog%2Fdist%2F2021%2F01%2F07%2FgitCommand%2F</url>
     <content type="text"><![CDATA[可以观看廖雪峰大神写的git教程 git init 初始化一个git仓库 git remote add origin &lt;git@server-name:path/repo-name.git&gt; 关联远程库 git clone 克隆 git checkout -b &lt;name&gt; or git switch -c &lt;name&gt; 检出分支pr-branch并切换到新分支上 git checkout -b &lt;new-branch&gt; origin/&lt;remote-branch&gt; 检出远程分支remote-branch到本地，命名为new-branch git commit 本地提交 git pull 远程更新拉到本地 git push 本地推送到远程 git merge c2 把c2 branch 内容合并到当前分支上 git rebase c2 将c2分支最新的提交同步到当前分支，并变成线性提交 git checkout c2^ 分离HEAD，让其指向c2的父级 git checkout c2~2 让其指向c2的父级的父级 git branch -f c2 HEAD~2 将分支c2重新分配给当前分支的父级的父级 git reset HEAD~1 将当前分支向后移到较早的提交上来恢复更改 git revert HEAD 重写当前分支，把上次的提交，反转过来再次提交， 来恢复之前的更改 git push -u origin master 将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了 git pull 相当于git fetch, git merge git pull --rebase 相当于git fetch , git rebase ，本地就不会出现提交分叉以及万恶的merge commit信息 rebase 好处 想要更好的提交树，使用rebase操作会更好一点。 这样可以线性的看到每一次提交，并且没有增加提交节点。 merge 操作遇到冲突的时候，当前merge不能继续进行下去。手动修改冲突内容后，add 修改，commit 就可以了。 而rebase 操作的话，会中断rebase,同时会提示去解决冲突。 解决冲突后,将修改add后执行git rebase –continue继续操作，或者git rebase –skip忽略冲突。 git stash 储藏现场工作（将git仓库已经追踪记录的，但是没有commit的东西先存起来） git stash list 查看储藏区 git stash apply stash@{0} 恢复储藏区， 不会删除储藏区的内容，等待commit git stash pop 恢复储藏区， 同时会删除储藏区的内容，等待commit git stash drop stash@{0} 删除储藏区的内容 git cherry-pick 4c805e2 复制一个特定的提交到当前分支 git tag &lt;tagname&gt; ? &lt;commit ID&gt; 用于新建一个标签，默认为HEAD，也可以指定一个commit id git tag -a &lt;tagname&gt; -m &quot;This is a tag&quot; 可以指定标签信息 git tag 查看所有标签 git show &lt;tagname&gt; 查看一个标签 git tag -d &lt;tagname&gt; 删除一个标签 git push origin &lt;tagname&gt; 推送一个本地标签 到 远程 git push origin --tags 推送全部未推送过的本地标签 git push origin :refs/tags/&lt;tagname&gt; 删除一个远程标签]]></content>
@@ -134,9 +158,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[词悬浮-词汇速记法1]]></title>
-    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish%2F</url>
-    <content type="text"><![CDATA[第一堂课笔记【词根】： -elect-(采集) -press-(压力)【前缀】：（常见30个）12345678910111213141516e- 向外un- 否定self- 自己col- 在一起，强调se- 分neg- 否定over- 在上，超过de- 向下，分im- 向内，否定，强调ex- 向外un- 否定anti- 反com- 在一起re- 往回，再次i??- 否定 【后缀】：（常见40个）12345678910111213141516171819202122-or === -er 名词或形容词后缀-ed 形容词或过去式或过去分词-al 形容词或名词后缀-ant 名词或形容词后缀-ation 复合名词后缀-ic 形容词或名词后缀-ive 形容词或名词后缀-ist 名词或形容词后缀-ing 形容词或动名词或现在分词-ion 名词后缀-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ity 名词后缀，表抽象事物-ize 动词后缀，表使动-ible 形容词后缀，表能...的-ful 形容词后缀-ure 名词或动词后缀-ly 副词后缀-less 形容词后缀，表否定-ness 名词后缀 【课后练习】： 单词 前缀 2 前缀1 词根1 后缀1 后缀2 含义 含义备选项（数字填写到’含义栏’） pressurized 1、adj.抗抑郁的 impressionism 2、n.选举 expressiveness 3、vt.使减压 unselected 4、n.压缩性 antidepressant 5、n.表情丰富 collectivism 6、adj.未选择的 neglectful 7、adj.加压的 election 8、n.印象主义 depressurize 9、adj.疏忽的 compressibility 10、n.集体主义]]></content>
+    <title><![CDATA[词悬浮-词汇速记法2]]></title>
+    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish2%2F</url>
+    <content type="text"><![CDATA[第二堂课笔记 【金字塔排序的意义】：以战养战 【词根】： -nat-(生) -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）123456789101112131415161718192021222324-er === or 形容词或名词后缀-ed 形容词、过去式、过去分词-less 形容词后缀，表否定-ness 名词后缀-al 形容词或名词后缀-ly 副词后缀-ity 名词后缀，表抽象含义-ics 学术名词后缀-ate 动词或形容词后缀-ion 名词后缀-ist 形容词或名词后缀-ic 形容词或名词后缀-s 名词后缀，复数名词后缀-ize 动词后缀，表使动-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ant 名词或形容词后缀-ive 名词或形容词后缀-ance 名词后缀-ing 形容词、动名词、现在分词-able 形容词后缀，表能...的-ation 复合名词后缀-ure 名词或动词后缀 【课后练习】： 单词 前缀1 词根1 后缀1 后缀2 后缀3 后缀4 后缀5 含义 含义备选项（数字填写到’含义栏’） formality 1、adj.自然主义的 denationalization 2、n.表演性 naturally 3、n.国有化 formation 4、n.变形金刚 naturalistic 5、n.跨国化 transfromational 6、n.编队 nationalization 7、adj.转换的 transnationalization 8、n.礼节 transformer 9、n.非国有化 performativity 10、adv.自然地 【听力练习推荐看片】：]]></content>
       <categories>
         <category>English</category>
       </categories>
@@ -145,9 +169,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[词悬浮-词汇速记法2]]></title>
-    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish2%2F</url>
-    <content type="text"><![CDATA[第二堂课笔记 【金字塔排序的意义】：以战养战 【词根】： -nat-(生) -form-(形成)【前缀】：（常见30个）1234567891011de- 向下，分inter- 在...之间，互相trans- 通过，改变un- 否定in- 否定，内向，强调，使动non- 否定semi- 半per- 完全trans- 通过，改变de- 分，向下 【后缀】：（常见40个）123456789101112131415161718192021222324-er === or 形容词或名词后缀-ed 形容词、过去式、过去分词-less 形容词后缀，表否定-ness 名词后缀-al 形容词或名词后缀-ly 副词后缀-ity 名词后缀，表抽象含义-ics 学术名词后缀-ate 动词或形容词后缀-ion 名词后缀-ist 形容词或名词后缀-ic 形容词或名词后缀-s 名词后缀，复数名词后缀-ize 动词后缀，表使动-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ant 名词或形容词后缀-ive 名词或形容词后缀-ance 名词后缀-ing 形容词、动名词、现在分词-able 形容词后缀，表能...的-ation 复合名词后缀-ure 名词或动词后缀 【课后练习】： 单词 前缀1 词根1 后缀1 后缀2 后缀3 后缀4 后缀5 含义 含义备选项（数字填写到’含义栏’） formality 1、adj.自然主义的 denationalization 2、n.表演性 naturally 3、n.国有化 formation 4、n.变形金刚 naturalistic 5、n.跨国化 transfromational 6、n.编队 nationalization 7、adj.转换的 transnationalization 8、n.礼节 transformer 9、n.非国有化 performativity 10、adv.自然地 【听力练习推荐看片】：]]></content>
+    <title><![CDATA[词悬浮-词汇速记法1]]></title>
+    <url>%2Fblog%2Fdist%2F2018%2F12%2F26%2FEnglish%2F</url>
+    <content type="text"><![CDATA[第一堂课笔记【词根】： -elect-(采集) -press-(压力)【前缀】：（常见30个）12345678910111213141516e- 向外un- 否定self- 自己col- 在一起，强调se- 分neg- 否定over- 在上，超过de- 向下，分im- 向内，否定，强调ex- 向外un- 否定anti- 反com- 在一起re- 往回，再次i??- 否定 【后缀】：（常见40个）12345678910111213141516171819202122-or === -er 名词或形容词后缀-ed 形容词或过去式或过去分词-al 形容词或名词后缀-ant 名词或形容词后缀-ation 复合名词后缀-ic 形容词或名词后缀-ive 形容词或名词后缀-ist 名词或形容词后缀-ing 形容词或动名词或现在分词-ion 名词后缀-ism 名词后缀，表...主义-ist 名词后缀，表...主义者-ity 名词后缀，表抽象事物-ize 动词后缀，表使动-ible 形容词后缀，表能...的-ful 形容词后缀-ure 名词或动词后缀-ly 副词后缀-less 形容词后缀，表否定-ness 名词后缀 【课后练习】： 单词 前缀 2 前缀1 词根1 后缀1 后缀2 含义 含义备选项（数字填写到’含义栏’） pressurized 1、adj.抗抑郁的 impressionism 2、n.选举 expressiveness 3、vt.使减压 unselected 4、n.压缩性 antidepressant 5、n.表情丰富 collectivism 6、adj.未选择的 neglectful 7、adj.加压的 election 8、n.印象主义 depressurize 9、adj.疏忽的 compressibility 10、n.集体主义]]></content>
       <categories>
         <category>English</category>
       </categories>
@@ -175,8 +199,8 @@
         <category>node</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>node</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
