@@ -89,10 +89,13 @@ leancloud_visitors:
   security: true
   betterPerformance: false
 
+
+
 # 访问数据监测
 leancloud_counter_security:
   enable_sync: true
   app_id: 12ByTVwdIx2mnE7V55u5V8d2-gzGzoHsz #<app_id>
   app_key: 1XWOszT9DM7UmRHM4BXfmz06 #<app_key>
+  server_url: https://12bytvwd.lc-cn-n1-shared.com
   username: chaofengdang
-  password: Pointer0217.
+  password: pointer0217.
