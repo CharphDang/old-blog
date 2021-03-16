@@ -1,414 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>词悬浮-词汇速记法2</title>
-    <url>/blog/dist/2018/12/26/English2/</url>
-    <content><![CDATA[<h1 id="第二堂课笔记"><a href="#第二堂课笔记" class="headerlink" title="第二堂课笔记"></a>第二堂课笔记</h1><blockquote>
-<p>【金字塔排序的意义】：以战养战</p>
+    <title>Koa</title>
+    <url>/blog/dist/2021/01/08/Koa/</url>
+    <content><![CDATA[<h2 id="Koa-是一个简单好用的Web框架，属于node服务器的层面语言技术。"><a href="#Koa-是一个简单好用的Web框架，属于node服务器的层面语言技术。" class="headerlink" title="Koa 是一个简单好用的Web框架，属于node服务器的层面语言技术。"></a>Koa 是一个简单好用的Web框架，属于node服务器的层面语言技术。</h2><blockquote>
+<p>此文默认当前已有node环境，如果你没有node环境，请自行安装</p>
 </blockquote>
-<h2 id="【词根】：-nat-生-form-形成"><a href="#【词根】：-nat-生-form-形成" class="headerlink" title="【词根】： -nat-(生)  -form-(形成)"></a>【词根】： -nat-(生)  -form-(形成)</h2><h2 id="【前缀】：（常见30个）"><a href="#【前缀】：（常见30个）" class="headerlink" title="【前缀】：（常见30个）"></a>【前缀】：（常见30个）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">de- 向下，分</span><br><span class="line">inter- 在...之间，互相</span><br><span class="line">trans- 通过，改变</span><br><span class="line">un- 否定</span><br><span class="line"></span><br><span class="line"><span class="keyword">in</span>- 否定，内向，强调，使动</span><br><span class="line">non- 否定</span><br><span class="line">semi- 半</span><br><span class="line">per- 完全</span><br><span class="line">trans- 通过，改变</span><br><span class="line">de- 分，向下</span><br></pre></td></tr></table></figure>
-<h2 id="【后缀】：（常见40个）"><a href="#【后缀】：（常见40个）" class="headerlink" title="【后缀】：（常见40个）"></a>【后缀】：（常见40个）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-er === or 形容词或名词后缀</span><br><span class="line">-ed 形容词、过去式、过去分词</span><br><span class="line">-less 形容词后缀，表否定</span><br><span class="line">-ness 名词后缀</span><br><span class="line">-al 形容词或名词后缀</span><br><span class="line">-ly 副词后缀</span><br><span class="line">-ity 名词后缀，表抽象含义</span><br><span class="line"></span><br><span class="line">-ics 学术名词后缀</span><br><span class="line">-ate 动词或形容词后缀</span><br><span class="line">-ion 名词后缀</span><br><span class="line">-ist 形容词或名词后缀</span><br><span class="line">-ic 形容词或名词后缀</span><br><span class="line">-s 名词后缀，复数名词后缀</span><br><span class="line">-ize 动词后缀，表使动</span><br><span class="line">-ism 名词后缀，表...主义</span><br><span class="line">-ist 名词后缀，表...主义者</span><br><span class="line">-ant 名词或形容词后缀</span><br><span class="line">-ive 名词或形容词后缀</span><br><span class="line">-ance 名词后缀</span><br><span class="line">-ing 形容词、动名词、现在分词</span><br><span class="line">-able 形容词后缀，表能...的</span><br><span class="line">-ation 复合名词后缀</span><br><span class="line">-ure 名词或动词后缀</span><br></pre></td></tr></table></figure>
-<h2 id="【课后练习】："><a href="#【课后练习】：" class="headerlink" title="【课后练习】："></a>【课后练习】：</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">单词</th>
-<th style="text-align:center">前缀1</th>
-<th style="text-align:center">词根1</th>
-<th style="text-align:center">后缀1</th>
-<th style="text-align:center">后缀2</th>
-<th style="text-align:center">后缀3</th>
-<th style="text-align:center">后缀4</th>
-<th style="text-align:center">后缀5</th>
-<th style="text-align:center">含义</th>
-<th>含义备选项（数字填写到’含义栏’）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">formality</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>1、adj.自然主义的</td>
-</tr>
-<tr>
-<td style="text-align:center">denationalization</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>2、n.表演性</td>
-</tr>
-<tr>
-<td style="text-align:center">naturally</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>3、n.国有化</td>
-</tr>
-<tr>
-<td style="text-align:center">formation</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>4、n.变形金刚</td>
-</tr>
-<tr>
-<td style="text-align:center">naturalistic</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>5、n.跨国化</td>
-</tr>
-<tr>
-<td style="text-align:center">transfromational</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>6、n.编队</td>
-</tr>
-<tr>
-<td style="text-align:center">nationalization</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>7、adj.转换的</td>
-</tr>
-<tr>
-<td style="text-align:center">transnationalization</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>8、n.礼节</td>
-</tr>
-<tr>
-<td style="text-align:center">transformer</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>9、n.非国有化</td>
-</tr>
-<tr>
-<td style="text-align:center">performativity</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td>10、adv.自然地</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="【听力练习推荐看片】："><a href="#【听力练习推荐看片】：" class="headerlink" title="【听力练习推荐看片】："></a>【听力练习推荐看片】：</h2><p><img src="/blog/dist/2018/12/26/English2/img.jpg" alt="image text"></p>
-]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>词悬浮-词汇速记法3</title>
-    <url>/blog/dist/2018/12/27/English3/</url>
-    <content><![CDATA[<h1 id="第三堂课笔记"><a href="#第三堂课笔记" class="headerlink" title="第三堂课笔记"></a>第三堂课笔记</h1><ul>
-<li><h5 id="速记的心法：-半母语式学习"><a href="#速记的心法：-半母语式学习" class="headerlink" title="速记的心法： 半母语式学习"></a>速记的心法： 半母语式学习</h5></li>
-<li><h5 id="论拉丁语在英语词汇学习中的重要性"><a href="#论拉丁语在英语词汇学习中的重要性" class="headerlink" title="论拉丁语在英语词汇学习中的重要性"></a>论拉丁语在英语词汇学习中的重要性</h5></li>
-<li><h5 id="掌握拉丁语词根即可"><a href="#掌握拉丁语词根即可" class="headerlink" title="掌握拉丁语词根即可"></a>掌握拉丁语词根即可</h5></li>
-</ul>
-<h2 id="【词根】：-vis-vid-看-、-it-走-、-tele-远-、-gram-graph-写，画，图-、-phot-光-、-o-连字符-、-geo-大地-、-electr-电-、-phon-声音-、-cardi-心-、-astro-星系-、-stud-学习，工作-、-aud-听-、-rad-辐射-、-cast-投掷-、-cass-拿-、"><a href="#【词根】：-vis-vid-看-、-it-走-、-tele-远-、-gram-graph-写，画，图-、-phot-光-、-o-连字符-、-geo-大地-、-electr-电-、-phon-声音-、-cardi-心-、-astro-星系-、-stud-学习，工作-、-aud-听-、-rad-辐射-、-cast-投掷-、-cass-拿-、" class="headerlink" title="【词根】： -vis- =  -vid- (看) 、-it-(走)、-tele-(远)、-gram- = -graph- (写，画，图)、-phot-(光)、-o-(连字符)、-geo-(大地)、-electr-(电)、-phon-(声音)、-cardi-(心)、-astro-(星系)、-stud-(学习，工作)、-aud-(听)、-rad-(辐射)、-cast-(投掷)、-cass-(拿)、"></a>【词根】： -vis- =  -vid- (看) 、-it-(走)、-tele-(远)、-gram- = -graph- (写，画，图)、-phot-(光)、-o-(连字符)、-geo-(大地)、-electr-(电)、-phon-(声音)、-cardi-(心)、-astro-(星系)、-stud-(学习，工作)、-aud-(听)、-rad-(辐射)、-cast-(投掷)、-cass-(拿)、</h2><blockquote>
-<p>建议：学会画思维导图，供复习使用。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v14<span class="number">.15</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本地新建一个空目录，进行依赖的安装</p>
 </blockquote>
-<h2 id="【前缀】：（常见30个）"><a href="#【前缀】：（常见30个）" class="headerlink" title="【前缀】：（常见30个）"></a>【前缀】：（常见30个）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">re- 往回，重复，再次</span><br><span class="line"><span class="keyword">super</span>- 在上，超过</span><br><span class="line">pro- 向前</span><br><span class="line">e- 向外</span><br><span class="line"></span><br><span class="line">ad- 强调</span><br><span class="line"><span class="keyword">in</span>- = im- 向内，强调，否定 </span><br><span class="line">self-自己</span><br></pre></td></tr></table></figure>
-<h2 id="【后缀】：（常见40个）"><a href="#【后缀】：（常见40个）" class="headerlink" title="【后缀】：（常见40个）"></a>【后缀】：（常见40个）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-or 名词或形容词后缀</span><br><span class="line">-able = -ible 形容词后缀，表能...的</span><br><span class="line">-ory = -ary 形容词或名词后缀</span><br><span class="line">-ice 名词后缀</span><br><span class="line">-ion 名词后缀</span><br><span class="line">-ism 名词后缀，表...主义</span><br><span class="line">-ist 名词或形容词后缀</span><br><span class="line">-ly 副词后缀</span><br><span class="line">-ize = -ise 动词后缀，表使动</span><br><span class="line"></span><br><span class="line">-ed 形容词或过去式或过去分词后缀</span><br><span class="line">-ing 形容词或动名词或现在分词后缀</span><br><span class="line">-e 名词或动词后缀</span><br><span class="line">-al 形容词或名词后缀</span><br><span class="line">-ent 名词或形容词后缀</span><br><span class="line">-o 名词后缀</span><br><span class="line">-ate 形容词或名词后缀</span><br><span class="line">-ette 名词后缀，表小</span><br><span class="line">-ence 名词后缀</span><br></pre></td></tr></table></figure>
-<h2 id="【课后练习】："><a href="#【课后练习】：" class="headerlink" title="【课后练习】："></a>【课后练习】：</h2><table>
-<thead>
-<tr>
-<th>单词</th>
-<th>前缀1</th>
-<th>词根1</th>
-<th>后缀1</th>
-<th>后缀2</th>
-<th>含义</th>
-<th>含义备选项</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>respected</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>1、adv.期望地</td>
-</tr>
-<tr>
-<td>inspector</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>2、n.定义</td>
-</tr>
-<tr>
-<td>retrospect</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>3、n.内省</td>
-</tr>
-<tr>
-<td>finish</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>4、adj.无限的</td>
-</tr>
-<tr>
-<td>expectantly</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>5、n.（美）公寓</td>
-</tr>
-<tr>
-<td>department</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>6、vi.回顾</td>
-</tr>
-<tr>
-<td>introspection</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>7、adj.受尊敬的</td>
-</tr>
-<tr>
-<td>aprtment</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>8、vt.完成</td>
-</tr>
-<tr>
-<td>definition</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>9、n.（大学的）科、系</td>
-</tr>
-<tr>
-<td>Infinite</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>10、n.检查员</td>
-</tr>
-</tbody>
-</table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">npm i koa2 koa-router koa-<span class="keyword">static</span> -S</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>搭建http服务</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base.js</span></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+<p>运行这个脚本，<code>node base.js</code></p>
+<p>然后在浏览器中输入<code>localhost:3000</code>， 你就会看到页面提示”Not Found”， 这就已经启动起来了。</p>
+</li>
+<li><p>建立静态页面，并使用koa-static来加载</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// index.html</span></span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">        &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width,initial-scale=1,user-scalable=0"</span> /&gt;</span><br><span class="line">        &lt;script src=<span class="string">"https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">        &lt;script src="https:/</span><span class="regexp">/cdn.bootcdn.net/</span>ajax/libs/axios/<span class="number">0.20</span><span class="number">.0</span><span class="number">-0</span>/axios.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">        &lt;script src="</span>https:<span class="comment">//cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.js"&gt;&lt;/script&gt;</span></span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            <span class="comment">/* .cube-btn &#123;</span></span><br><span class="line"><span class="comment">            margin: 10px 0;</span></span><br><span class="line"><span class="comment">        &#125; */</span></span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">            &lt;div&gt;&#123;&#123;name&#125;&#125; : &#123;&#123;age&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;button @click="getTokens"&gt;getTokens&lt;/</span>button&gt;</span><br><span class="line">            &lt;button @click=<span class="string">"setTokens"</span>&gt;setTokens&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">            &lt;button @click="noAPI"&gt;noAPI&lt;/</span>button&gt;</span><br><span class="line">            &lt;button @click=<span class="string">"redirect"</span>&gt;redirect&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">                el: <span class="string">'#app'</span>,</span><br><span class="line">                data() &#123;</span><br><span class="line">                    <span class="keyword">return</span> &#123;</span><br><span class="line">                        name: <span class="string">'dangchaofeng'</span>,</span><br><span class="line">                        age: <span class="string">'28'</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;,</span><br><span class="line">                methods: &#123;</span><br><span class="line">                    <span class="keyword">async</span> getTokens() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.get(<span class="string">`/getTokens`</span>);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="keyword">async</span> setTokens() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.post(<span class="string">`/setTokens`</span>);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="keyword">async</span> redirect() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.get(<span class="string">`/redirect`</span>);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="keyword">async</span> noAPI() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.delete(<span class="string">`/noAPI`</span>, &#123;</span><br><span class="line">                            params: &#123;</span><br><span class="line">                                id: <span class="string">' 1'</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ base-static.js</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const Koa = require('koa2');</span></span><br><span class="line"><span class="regexp">const app = new Koa();</span></span><br><span class="line"><span class="regexp">const static = require('koa-static');</span></span><br><span class="line"><span class="regexp">const path = require('path');</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const main = static(path.join(__dirname));</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">app.use(main);</span></span><br><span class="line"><span class="regexp">app.listen(3000);</span></span><br></pre></td></tr></table></figure>
+<p>运行这个脚本，<code>node base-static.js</code></p>
+<p>然后在浏览器中输入<code>localhost:3000</code>， 你就会看到自己的页面。</p>
+</li>
+<li><p>加载koa-router路由功能</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base-router.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/getTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        token: <span class="string">'123'</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/setTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/noAPI'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(__dirname)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 启用路由</span></span><br><span class="line">app.use(router.routes());</span><br><span class="line"><span class="comment">// * 自动识别405等返回。</span></span><br><span class="line"><span class="comment">// * /noAPI , 只有post ，没有 delete方法，页面触发delete，就会直接405</span></span><br><span class="line">app.use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此处强调说明三点：</p>
+<p>router是用的restful api</p>
+<p>app.use(router.routes());  此句的作用就是启用路由，将路由这个中间件加载给koa</p>
+<p>app.use(router.allowedMethods()); 此句的作用，是让路由自动识别方法，例如你的接口只实现了get方法，没有对应的post,put,delete方法，那么当你从页面上访问并没有定义的方法时，正常情况会识别到404返回，如果加载这个中间件，那么它会识别为405，表示你不允许这个方法操作</p>
+</blockquote>
+</li>
+<li><p>重定向 <code>// ctx.redirect(&#39;getTokens&#39;);</code> 会产生302 的状态码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base-redirect.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @Author: Adam Dang</span></span><br><span class="line"><span class="comment"> * @Description: 重定向路由</span></span><br><span class="line"><span class="comment"> * @Date: 2021-01-08 14:25:38</span></span><br><span class="line"><span class="comment"> * @LastEditors: Adam Dang</span></span><br><span class="line"><span class="comment"> * @LastEditTime: 2021-01-08 14:25:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/getTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        token: <span class="string">'123'</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/setTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 重定向到其他url上</span></span><br><span class="line">router.get(<span class="string">'/redirect'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.redirect(<span class="string">'/getTokens'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(__dirname)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 启用路由</span></span><br><span class="line">app.use(router.routes());</span><br><span class="line"><span class="comment">// * 自动识别405等返回。</span></span><br><span class="line"><span class="comment">// * /noAPI , 只有post ，没有 delete方法，页面触发delete，就会直接405</span></span><br><span class="line">app.use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过监听error 事件处理错误 <code>ctx.throw(500);</code>   <code>app.on(&#39;error&#39;,(err, ctx)=&gt;{ // handle })</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base-handleError.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/getTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.throw(<span class="number">500</span>);</span><br><span class="line">    <span class="comment">// ctx.body = &#123;</span></span><br><span class="line">    <span class="comment">//     token: '123'</span></span><br><span class="line">    <span class="comment">// &#125;;</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/setTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(__dirname)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 启用路由</span></span><br><span class="line">app.use(router.routes());</span><br><span class="line">app.use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 错误处理</span></span><br><span class="line">app.on(<span class="string">'error'</span>, (err, ctx) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(<span class="string">'server error'</span>, err);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>English</category>
+        <category>node</category>
+        <category>koa</category>
       </categories>
       <tags>
-        <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>词悬浮-词汇速记法1</title>
-    <url>/blog/dist/2018/12/26/English/</url>
-    <content><![CDATA[<h1 id="第一堂课笔记"><a href="#第一堂课笔记" class="headerlink" title="第一堂课笔记"></a>第一堂课笔记</h1><h2 id="【词根】：-elect-采集-press-压力"><a href="#【词根】：-elect-采集-press-压力" class="headerlink" title="【词根】： -elect-(采集)  -press-(压力)"></a>【词根】： -elect-(采集)  -press-(压力)</h2><h2 id="【前缀】：（常见30个）"><a href="#【前缀】：（常见30个）" class="headerlink" title="【前缀】：（常见30个）"></a>【前缀】：（常见30个）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">e- 向外</span><br><span class="line">un- 否定</span><br><span class="line">self- 自己</span><br><span class="line">col- 在一起，强调</span><br><span class="line">se- 分</span><br><span class="line">neg- 否定</span><br><span class="line"></span><br><span class="line">over- 在上，超过</span><br><span class="line">de- 向下，分</span><br><span class="line">im- 向内，否定，强调</span><br><span class="line">ex- 向外</span><br><span class="line">un- 否定</span><br><span class="line">anti- 反</span><br><span class="line">com- 在一起</span><br><span class="line">re- 往回，再次</span><br><span class="line">i??- 否定</span><br></pre></td></tr></table></figure>
-<h2 id="【后缀】：（常见40个）"><a href="#【后缀】：（常见40个）" class="headerlink" title="【后缀】：（常见40个）"></a>【后缀】：（常见40个）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-or === -er 名词或形容词后缀</span><br><span class="line">-ed 形容词或过去式或过去分词</span><br><span class="line">-al 形容词或名词后缀</span><br><span class="line">-ant 名词或形容词后缀</span><br><span class="line">-ation 复合名词后缀</span><br><span class="line"></span><br><span class="line">-ic 形容词或名词后缀</span><br><span class="line">-ive 形容词或名词后缀</span><br><span class="line">-ist 名词或形容词后缀</span><br><span class="line">-ing 形容词或动名词或现在分词</span><br><span class="line">-ion 名词后缀</span><br><span class="line">-ism 名词后缀，表...主义</span><br><span class="line">-ist 名词后缀，表...主义者</span><br><span class="line">-ity 名词后缀，表抽象事物</span><br><span class="line">-ize 动词后缀，表使动</span><br><span class="line">-ible 形容词后缀，表能...的</span><br><span class="line"></span><br><span class="line">-ful 形容词后缀</span><br><span class="line">-ure 名词或动词后缀</span><br><span class="line">-ly 副词后缀</span><br><span class="line">-less 形容词后缀，表否定</span><br><span class="line">-ness 名词后缀</span><br></pre></td></tr></table></figure>
-<h2 id="【课后练习】："><a href="#【课后练习】：" class="headerlink" title="【课后练习】："></a>【课后练习】：</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">单词</th>
-<th style="text-align:center">前缀 2</th>
-<th style="text-align:center">前缀1</th>
-<th style="text-align:center">词根1</th>
-<th style="text-align:center">后缀1</th>
-<th style="text-align:center">后缀2</th>
-<th style="text-align:center">含义</th>
-<th style="text-align:left">含义备选项（数字填写到’含义栏’）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">pressurized</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">1、adj.抗抑郁的</td>
-</tr>
-<tr>
-<td style="text-align:center">impressionism</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">2、n.选举</td>
-</tr>
-<tr>
-<td style="text-align:center">expressiveness</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">3、vt.使减压</td>
-</tr>
-<tr>
-<td style="text-align:center">unselected</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">4、n.压缩性</td>
-</tr>
-<tr>
-<td style="text-align:center">antidepressant</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">5、n.表情丰富</td>
-</tr>
-<tr>
-<td style="text-align:center">collectivism</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">6、adj.未选择的</td>
-</tr>
-<tr>
-<td style="text-align:center">neglectful</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">7、adj.加压的</td>
-</tr>
-<tr>
-<td style="text-align:center">election</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">8、n.印象主义</td>
-</tr>
-<tr>
-<td style="text-align:center">depressurize</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">9、adj.疏忽的</td>
-</tr>
-<tr>
-<td style="text-align:center">compressibility</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:left">10、n.集体主义</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
+        <tag>node</tag>
+        <tag>koa</tag>
       </tags>
   </entry>
   <entry>
@@ -480,54 +117,6 @@
       <tags>
         <tag>axios</tag>
         <tag>catch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Koa</title>
-    <url>/blog/dist/2021/01/08/Koa/</url>
-    <content><![CDATA[<h2 id="Koa-是一个简单好用的Web框架，属于node服务器的层面语言技术。"><a href="#Koa-是一个简单好用的Web框架，属于node服务器的层面语言技术。" class="headerlink" title="Koa 是一个简单好用的Web框架，属于node服务器的层面语言技术。"></a>Koa 是一个简单好用的Web框架，属于node服务器的层面语言技术。</h2><blockquote>
-<p>此文默认当前已有node环境，如果你没有node环境，请自行安装</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v14<span class="number">.15</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>本地新建一个空目录，进行依赖的安装</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">npm i koa2 koa-router koa-<span class="keyword">static</span> -S</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>搭建http服务</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base.js</span></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
-<p>运行这个脚本，<code>node base.js</code></p>
-<p>然后在浏览器中输入<code>localhost:3000</code>， 你就会看到页面提示”Not Found”， 这就已经启动起来了。</p>
-</li>
-<li><p>建立静态页面，并使用koa-static来加载</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// index.html</span></span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">        &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width,initial-scale=1,user-scalable=0"</span> /&gt;</span><br><span class="line">        &lt;script src=<span class="string">"https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">        &lt;script src="https:/</span><span class="regexp">/cdn.bootcdn.net/</span>ajax/libs/axios/<span class="number">0.20</span><span class="number">.0</span><span class="number">-0</span>/axios.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">        &lt;script src="</span>https:<span class="comment">//cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.js"&gt;&lt;/script&gt;</span></span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            <span class="comment">/* .cube-btn &#123;</span></span><br><span class="line"><span class="comment">            margin: 10px 0;</span></span><br><span class="line"><span class="comment">        &#125; */</span></span><br><span class="line">        &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">            &lt;div&gt;&#123;&#123;name&#125;&#125; : &#123;&#123;age&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;button @click="getTokens"&gt;getTokens&lt;/</span>button&gt;</span><br><span class="line">            &lt;button @click=<span class="string">"setTokens"</span>&gt;setTokens&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">            &lt;button @click="noAPI"&gt;noAPI&lt;/</span>button&gt;</span><br><span class="line">            &lt;button @click=<span class="string">"redirect"</span>&gt;redirect&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">                el: <span class="string">'#app'</span>,</span><br><span class="line">                data() &#123;</span><br><span class="line">                    <span class="keyword">return</span> &#123;</span><br><span class="line">                        name: <span class="string">'dangchaofeng'</span>,</span><br><span class="line">                        age: <span class="string">'28'</span></span><br><span class="line">                    &#125;;</span><br><span class="line">                &#125;,</span><br><span class="line">                methods: &#123;</span><br><span class="line">                    <span class="keyword">async</span> getTokens() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.get(<span class="string">`/getTokens`</span>);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="keyword">async</span> setTokens() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.post(<span class="string">`/setTokens`</span>);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="keyword">async</span> redirect() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.get(<span class="string">`/redirect`</span>);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="keyword">async</span> noAPI() &#123;</span><br><span class="line">                        <span class="keyword">const</span> res = <span class="keyword">await</span> axios.delete(<span class="string">`/noAPI`</span>, &#123;</span><br><span class="line">                            params: &#123;</span><br><span class="line">                                id: <span class="string">' 1'</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;);</span><br><span class="line">                        <span class="built_in">console</span>.log(<span class="string">'res'</span>, res);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ base-static.js</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const Koa = require('koa2');</span></span><br><span class="line"><span class="regexp">const app = new Koa();</span></span><br><span class="line"><span class="regexp">const static = require('koa-static');</span></span><br><span class="line"><span class="regexp">const path = require('path');</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const main = static(path.join(__dirname));</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">app.use(main);</span></span><br><span class="line"><span class="regexp">app.listen(3000);</span></span><br></pre></td></tr></table></figure>
-<p>运行这个脚本，<code>node base-static.js</code></p>
-<p>然后在浏览器中输入<code>localhost:3000</code>， 你就会看到自己的页面。</p>
-</li>
-<li><p>加载koa-router路由功能</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base-router.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/getTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        token: <span class="string">'123'</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/setTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/noAPI'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(__dirname)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 启用路由</span></span><br><span class="line">app.use(router.routes());</span><br><span class="line"><span class="comment">// * 自动识别405等返回。</span></span><br><span class="line"><span class="comment">// * /noAPI , 只有post ，没有 delete方法，页面触发delete，就会直接405</span></span><br><span class="line">app.use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>此处强调说明三点：</p>
-<p>router是用的restful api</p>
-<p>app.use(router.routes());  此句的作用就是启用路由，将路由这个中间件加载给koa</p>
-<p>app.use(router.allowedMethods()); 此句的作用，是让路由自动识别方法，例如你的接口只实现了get方法，没有对应的post,put,delete方法，那么当你从页面上访问并没有定义的方法时，正常情况会识别到404返回，如果加载这个中间件，那么它会识别为405，表示你不允许这个方法操作</p>
-</blockquote>
-</li>
-<li><p>重定向 <code>// ctx.redirect(&#39;getTokens&#39;);</code> 会产生302 的状态码</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base-redirect.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @Author: Adam Dang</span></span><br><span class="line"><span class="comment"> * @Description: 重定向路由</span></span><br><span class="line"><span class="comment"> * @Date: 2021-01-08 14:25:38</span></span><br><span class="line"><span class="comment"> * @LastEditors: Adam Dang</span></span><br><span class="line"><span class="comment"> * @LastEditTime: 2021-01-08 14:25:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/getTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        token: <span class="string">'123'</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/setTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 重定向到其他url上</span></span><br><span class="line">router.get(<span class="string">'/redirect'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.redirect(<span class="string">'/getTokens'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(__dirname)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 启用路由</span></span><br><span class="line">app.use(router.routes());</span><br><span class="line"><span class="comment">// * 自动识别405等返回。</span></span><br><span class="line"><span class="comment">// * /noAPI , 只有post ，没有 delete方法，页面触发delete，就会直接405</span></span><br><span class="line">app.use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过监听error 事件处理错误 <code>ctx.throw(500);</code>   <code>app.on(&#39;error&#39;,(err, ctx)=&gt;{ // handle })</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// base-handleError.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa2'</span>);</span><br><span class="line"><span class="keyword">const</span> Router = <span class="built_in">require</span>(<span class="string">'koa-router'</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span> = <span class="built_in">require</span>(<span class="string">'koa-static'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router();</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/getTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.throw(<span class="number">500</span>);</span><br><span class="line">    <span class="comment">// ctx.body = &#123;</span></span><br><span class="line">    <span class="comment">//     token: '123'</span></span><br><span class="line">    <span class="comment">// &#125;;</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/setTokens'</span>, ctx =&gt; &#123;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        success: <span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(__dirname)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 启用路由</span></span><br><span class="line">app.use(router.routes());</span><br><span class="line">app.use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 错误处理</span></span><br><span class="line">app.on(<span class="string">'error'</span>, (err, ctx) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(<span class="string">'server error'</span>, err);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>node</category>
-        <category>koa</category>
-      </categories>
-      <tags>
-        <tag>node</tag>
-        <tag>koa</tag>
       </tags>
   </entry>
   <entry>
@@ -664,6 +253,95 @@
       </categories>
       <tags>
         <tag>desgin-patterns</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>es6Class</title>
+    <url>/blog/dist/2019/03/04/es6Class/</url>
+    <content><![CDATA[<h1 id="es6中class的基本使用"><a href="#es6中class的基本使用" class="headerlink" title="es6中class的基本使用"></a>es6中class的基本使用</h1><ul>
+<li><p>有几个关键字的使用：</p>
+<ul>
+<li>class： 用来定义’类’； </li>
+<li>constructor： 用来初始化’类’；</li>
+<li>extends： 用来子类继承父类；</li>
+<li>super： 调用父类方法<ul>
+<li>区分一： constructor 中，直接调用super()并传参，相当于调用父级的constructor；</li>
+<li>区分二：普通方法中（原型方法），super指向父类的原型对象，调用super.xx()， xx指代父级的某个方法；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>示例代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    sayName() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> animal = <span class="keyword">new</span> Animal(<span class="string">'小动物'</span>);</span><br><span class="line">animal.sayName();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name, age) &#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    sayName() &#123;</span><br><span class="line">        <span class="comment">// 调用父类方法</span></span><br><span class="line">        <span class="keyword">super</span>.sayName();</span><br><span class="line">        <span class="comment">// 写子类自己的方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
+<p>简不简单，惊不惊喜，意不意外，开不开心？</p>
+<blockquote>
+<p>class使用就是这么简单，但是要知道这只是语法糖，es5中继承是如何实现呢？</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="es5中继承的基本实现"><a href="#es5中继承的基本实现" class="headerlink" title="es5中继承的基本实现"></a>es5中继承的基本实现</h1><ul>
+<li><p>几个关键字的使用：</p>
+<ul>
+<li>function：类就是使用函数创建出来的；</li>
+<li>prototype：原型属性；</li>
+<li>Object.create(<code>__proto__</code>, <code>obj</code>)：用来创建对象<ul>
+<li>参数一<code>__proto__</code>：必需，被创建对象的原型对象。</li>
+<li>参数二<code>obj</code>：可选，包含一个或多个属性描述符的 JavaScript 对象，用来规定要被添加到对象的属性，可以分为两类，数据属性和访问器属性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>简单使用示例代码(从基本示例中引发思考，如何调用父级方法)：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Animal.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将Dog的原型指向Animal的一个实例</span></span><br><span class="line">Dog.prototype = <span class="keyword">new</span> Animal();</span><br><span class="line"><span class="comment">// 因为Animal的实例可以调用Animal原型中的方法, 所以Dog的实例也可以调用Animal原型中的所有属性。</span></span><br><span class="line">Dog.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params">argument</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="es6class创建和es5中function创建，异同点在哪里？"><a href="#es6class创建和es5中function创建，异同点在哪里？" class="headerlink" title="es6class创建和es5中function创建，异同点在哪里？"></a>es6class创建和es5中function创建，异同点在哪里？</h1><ul>
+<li><p>相同点：</p>
+<ul>
+<li>都分为声明式和表达式</li>
+<li>对待name,length表现一致</li>
+<li>对待创建变量结果一致***</li>
+<li>fn对待相同，都可以用call,apply.bind来改变this指向</li>
+</ul>
+</li>
+<li><p>不同点：</p>
+<ul>
+<li>声明式，es5中的fn是存在变量提升的，es6中的class没有</li>
+<li>Dog类， fn创建可以使用call调用，class创建的不能</li>
+<li>在全局中创建Dog类，fn可以在window中访问Dog,class生成的不能</li>
+<li>武昌补充。。。我没琢磨粗来</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>那在es6还没出来的时候，当初的开发人员是如何写类的继承呢？别天真了，人没有那么傻，别个早已经封装实现了此类方法。<br>  <video id="video" controls preload="none" poster="laugh.mp4"><br>    sorry,您的浏览器不支持该视频类型!<br>    <source id="mp4" src="laugh.mp4" type="video/mp4"><br>  </video><br>看看es5的时候，别个是如何使用继承的</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="keyword">var</span> Animal = Class.extend(&#123;</span><br><span class="line">    <span class="comment">// init是构造函数，起到contructor的作用</span></span><br><span class="line">    init: <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> animal = <span class="keyword">new</span> Animal(<span class="string">'小动物'</span>);</span><br><span class="line">animal.sayName();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="keyword">var</span> Dog = Animal.extend(&#123;</span><br><span class="line">    <span class="comment">// init是构造函数</span></span><br><span class="line">    init: <span class="function"><span class="keyword">function</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//  在构造函数中调用父类的构造函数</span></span><br><span class="line">        <span class="keyword">this</span>._super(name);</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 调用父类方法</span></span><br><span class="line">        <span class="keyword">this</span>._super();</span><br><span class="line">        <span class="comment">// 写子类自己的方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
+<h1 id="看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承"><a href="#看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承" class="headerlink" title="看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承"></a>看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承</h1><ul>
+<li><p>示例看基本的继承</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Animal.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将Dog的原型指向Animal的一个实例</span></span><br><span class="line">Dog.prototype = <span class="keyword">new</span> Animal();</span><br><span class="line"><span class="comment">// 因为Animal的实例可以调用Animal原型中的方法, 所以Dog的实例也可以调用Animal原型中的所有属性。</span></span><br><span class="line">Dog.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述示例的缺陷：</p>
+<ol>
+<li>在创建Dog构造函数和原型时，就对Animal进行了实例化，这是不合适的。</li>
+<li>Dog的构造函数没法调用父类Animal的构造函数，导致在Dog构造函数中对name属性的重复赋值。</li>
+<li>Dog中的函数会覆盖Animal中的同名函数，没有重载的机制（和上一条是一个类型的问题）。</li>
+<li>实现中有constructor属性的指向错误。</li>
+<li>单一职责，不够通用。 </li>
+</ol>
+</li>
+<li><p>我们将其一个一个缺陷进行解决，最后便可以得到我们想要的封装结构,下面是完整代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Class = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 标识类的初始化是否完成，如果完成，便可以调用init进行初始化构造函数</span></span><br><span class="line">  <span class="keyword">var</span> initCompleteStatus = <span class="literal">false</span>;</span><br><span class="line">  <span class="comment">// 定义正则，边界为_super完整的字符串则是真</span></span><br><span class="line">  <span class="keyword">var</span> reg = <span class="regexp">/\b_super\b/</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">parentClass</span>(<span class="params"></span>) </span>&#123;&#125; <span class="comment">// 父级，初始化基类是空对象</span></span><br><span class="line"></span><br><span class="line">  parentClass.extend = <span class="function"><span class="keyword">function</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">childClass</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (initCompleteStatus) &#123;</span><br><span class="line">        <span class="keyword">this</span>.init.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> _super = <span class="keyword">this</span>.prototype; <span class="comment">// 父级类的原型</span></span><br><span class="line">    <span class="comment">// 保存父级的所有属性为子类的原型，并重置constructor</span></span><br><span class="line">      </span><br><span class="line">    initCompleteStatus = <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">// 此时的实例化不会调用init</span></span><br><span class="line">    childClass.prototype = <span class="keyword">new</span> <span class="keyword">this</span>();</span><br><span class="line">    initCompleteStatus = <span class="literal">true</span>;</span><br><span class="line">      </span><br><span class="line">    <span class="built_in">Object</span>.defineProperty(childClass.prototype, <span class="string">"constructor"</span>, &#123;</span><br><span class="line">      value: childClass</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 自身属性的赋值</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> name <span class="keyword">in</span> props) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> props[name] === <span class="string">"function"</span> &amp;&amp; reg.test(props[name])) &#123;</span><br><span class="line">        childClass.prototype[name] = (<span class="function"><span class="keyword">function</span>(<span class="params">name, fn</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.dir(<span class="built_in">Object</span>.toString.call(fn));</span><br><span class="line">            <span class="keyword">var</span> temp = <span class="keyword">this</span>._super;</span><br><span class="line">            <span class="keyword">this</span>._super = _super[name];</span><br><span class="line">            <span class="comment">// 拿到函数返回值</span></span><br><span class="line">            <span class="keyword">var</span> result = fn.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">            <span class="keyword">this</span>._super = temp;</span><br><span class="line">            <span class="comment">// 将返回值返回</span></span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">          &#125;;</span><br><span class="line">        &#125;)(name, props[name]);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        childClass.prototype[name] = props[name];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    childClass.extend = <span class="built_in">arguments</span>.callee;</span><br><span class="line">    <span class="keyword">return</span> childClass;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> parentClass;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>class</category>
+        <category>prototype</category>
+      </categories>
+      <tags>
+        <tag>class</tag>
+        <tag>prototype</tag>
       </tags>
   </entry>
   <entry>
@@ -848,95 +526,6 @@ merge 操作遇到冲突的时候，当前merge不能继续进行下去。手动
       </tags>
   </entry>
   <entry>
-    <title>es6Class</title>
-    <url>/blog/dist/2019/03/04/es6Class/</url>
-    <content><![CDATA[<h1 id="es6中class的基本使用"><a href="#es6中class的基本使用" class="headerlink" title="es6中class的基本使用"></a>es6中class的基本使用</h1><ul>
-<li><p>有几个关键字的使用：</p>
-<ul>
-<li>class： 用来定义’类’； </li>
-<li>constructor： 用来初始化’类’；</li>
-<li>extends： 用来子类继承父类；</li>
-<li>super： 调用父类方法<ul>
-<li>区分一： constructor 中，直接调用super()并传参，相当于调用父级的constructor；</li>
-<li>区分二：普通方法中（原型方法），super指向父类的原型对象，调用super.xx()， xx指代父级的某个方法；</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>示例代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    sayName() &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> animal = <span class="keyword">new</span> Animal(<span class="string">'小动物'</span>);</span><br><span class="line">animal.sayName();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name, age) &#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    sayName() &#123;</span><br><span class="line">        <span class="comment">// 调用父类方法</span></span><br><span class="line">        <span class="keyword">super</span>.sayName();</span><br><span class="line">        <span class="comment">// 写子类自己的方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
-<p>简不简单，惊不惊喜，意不意外，开不开心？</p>
-<blockquote>
-<p>class使用就是这么简单，但是要知道这只是语法糖，es5中继承是如何实现呢？</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="es5中继承的基本实现"><a href="#es5中继承的基本实现" class="headerlink" title="es5中继承的基本实现"></a>es5中继承的基本实现</h1><ul>
-<li><p>几个关键字的使用：</p>
-<ul>
-<li>function：类就是使用函数创建出来的；</li>
-<li>prototype：原型属性；</li>
-<li>Object.create(<code>__proto__</code>, <code>obj</code>)：用来创建对象<ul>
-<li>参数一<code>__proto__</code>：必需，被创建对象的原型对象。</li>
-<li>参数二<code>obj</code>：可选，包含一个或多个属性描述符的 JavaScript 对象，用来规定要被添加到对象的属性，可以分为两类，数据属性和访问器属性</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>简单使用示例代码(从基本示例中引发思考，如何调用父级方法)：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Animal.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将Dog的原型指向Animal的一个实例</span></span><br><span class="line">Dog.prototype = <span class="keyword">new</span> Animal();</span><br><span class="line"><span class="comment">// 因为Animal的实例可以调用Animal原型中的方法, 所以Dog的实例也可以调用Animal原型中的所有属性。</span></span><br><span class="line">Dog.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params">argument</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="es6class创建和es5中function创建，异同点在哪里？"><a href="#es6class创建和es5中function创建，异同点在哪里？" class="headerlink" title="es6class创建和es5中function创建，异同点在哪里？"></a>es6class创建和es5中function创建，异同点在哪里？</h1><ul>
-<li><p>相同点：</p>
-<ul>
-<li>都分为声明式和表达式</li>
-<li>对待name,length表现一致</li>
-<li>对待创建变量结果一致***</li>
-<li>fn对待相同，都可以用call,apply.bind来改变this指向</li>
-</ul>
-</li>
-<li><p>不同点：</p>
-<ul>
-<li>声明式，es5中的fn是存在变量提升的，es6中的class没有</li>
-<li>Dog类， fn创建可以使用call调用，class创建的不能</li>
-<li>在全局中创建Dog类，fn可以在window中访问Dog,class生成的不能</li>
-<li>武昌补充。。。我没琢磨粗来</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>那在es6还没出来的时候，当初的开发人员是如何写类的继承呢？别天真了，人没有那么傻，别个早已经封装实现了此类方法。<br>  <video id="video" controls preload="none" poster="laugh.mp4"><br>    sorry,您的浏览器不支持该视频类型!<br>    <source id="mp4" src="laugh.mp4" type="video/mp4"><br>  </video><br>看看es5的时候，别个是如何使用继承的</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="keyword">var</span> Animal = Class.extend(&#123;</span><br><span class="line">    <span class="comment">// init是构造函数，起到contructor的作用</span></span><br><span class="line">    init: <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> animal = <span class="keyword">new</span> Animal(<span class="string">'小动物'</span>);</span><br><span class="line">animal.sayName();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="keyword">var</span> Dog = Animal.extend(&#123;</span><br><span class="line">    <span class="comment">// init是构造函数</span></span><br><span class="line">    init: <span class="function"><span class="keyword">function</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//  在构造函数中调用父类的构造函数</span></span><br><span class="line">        <span class="keyword">this</span>._super(name);</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 调用父类方法</span></span><br><span class="line">        <span class="keyword">this</span>._super();</span><br><span class="line">        <span class="comment">// 写子类自己的方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
-<h1 id="看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承"><a href="#看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承" class="headerlink" title="看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承"></a>看过别人的继承使用效果后，我们来实现一个类似的手动实现原型继承</h1><ul>
-<li><p>示例看基本的继承</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 基类-动物</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Animal.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name, <span class="string">'--------基类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Animal中的方法'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 子类，狗--继承于动物类</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将Dog的原型指向Animal的一个实例</span></span><br><span class="line">Dog.prototype = <span class="keyword">new</span> Animal();</span><br><span class="line"><span class="comment">// 因为Animal的实例可以调用Animal原型中的方法, 所以Dog的实例也可以调用Animal原型中的所有属性。</span></span><br><span class="line">Dog.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>(<span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span>)----------子类&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Dog类中的方法`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog(<span class="string">'大黄'</span>, <span class="string">'7'</span>);</span><br><span class="line">dog.sayName();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>上述示例的缺陷：</p>
-<ol>
-<li>在创建Dog构造函数和原型时，就对Animal进行了实例化，这是不合适的。</li>
-<li>Dog的构造函数没法调用父类Animal的构造函数，导致在Dog构造函数中对name属性的重复赋值。</li>
-<li>Dog中的函数会覆盖Animal中的同名函数，没有重载的机制（和上一条是一个类型的问题）。</li>
-<li>实现中有constructor属性的指向错误。</li>
-<li>单一职责，不够通用。 </li>
-</ol>
-</li>
-<li><p>我们将其一个一个缺陷进行解决，最后便可以得到我们想要的封装结构,下面是完整代码</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Class = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 标识类的初始化是否完成，如果完成，便可以调用init进行初始化构造函数</span></span><br><span class="line">  <span class="keyword">var</span> initCompleteStatus = <span class="literal">false</span>;</span><br><span class="line">  <span class="comment">// 定义正则，边界为_super完整的字符串则是真</span></span><br><span class="line">  <span class="keyword">var</span> reg = <span class="regexp">/\b_super\b/</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">parentClass</span>(<span class="params"></span>) </span>&#123;&#125; <span class="comment">// 父级，初始化基类是空对象</span></span><br><span class="line"></span><br><span class="line">  parentClass.extend = <span class="function"><span class="keyword">function</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">childClass</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (initCompleteStatus) &#123;</span><br><span class="line">        <span class="keyword">this</span>.init.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> _super = <span class="keyword">this</span>.prototype; <span class="comment">// 父级类的原型</span></span><br><span class="line">    <span class="comment">// 保存父级的所有属性为子类的原型，并重置constructor</span></span><br><span class="line">      </span><br><span class="line">    initCompleteStatus = <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">// 此时的实例化不会调用init</span></span><br><span class="line">    childClass.prototype = <span class="keyword">new</span> <span class="keyword">this</span>();</span><br><span class="line">    initCompleteStatus = <span class="literal">true</span>;</span><br><span class="line">      </span><br><span class="line">    <span class="built_in">Object</span>.defineProperty(childClass.prototype, <span class="string">"constructor"</span>, &#123;</span><br><span class="line">      value: childClass</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 自身属性的赋值</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> name <span class="keyword">in</span> props) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> props[name] === <span class="string">"function"</span> &amp;&amp; reg.test(props[name])) &#123;</span><br><span class="line">        childClass.prototype[name] = (<span class="function"><span class="keyword">function</span>(<span class="params">name, fn</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.dir(<span class="built_in">Object</span>.toString.call(fn));</span><br><span class="line">            <span class="keyword">var</span> temp = <span class="keyword">this</span>._super;</span><br><span class="line">            <span class="keyword">this</span>._super = _super[name];</span><br><span class="line">            <span class="comment">// 拿到函数返回值</span></span><br><span class="line">            <span class="keyword">var</span> result = fn.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">            <span class="keyword">this</span>._super = temp;</span><br><span class="line">            <span class="comment">// 将返回值返回</span></span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">          &#125;;</span><br><span class="line">        &#125;)(name, props[name]);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        childClass.prototype[name] = props[name];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    childClass.extend = <span class="built_in">arguments</span>.callee;</span><br><span class="line">    <span class="keyword">return</span> childClass;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> parentClass;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>class</category>
-        <category>prototype</category>
-      </categories>
-      <tags>
-        <tag>class</tag>
-        <tag>prototype</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>grunt</title>
     <url>/blog/dist/2019/08/27/grunt/</url>
     <content><![CDATA[<h1 id="grunt"><a href="#grunt" class="headerlink" title="grunt"></a>grunt</h1><ol>
@@ -1113,6 +702,58 @@ merge 操作遇到冲突的时候，当前merge不能继续进行下去。手动
 ]]></content>
   </entry>
   <entry>
+    <title>单元测试</title>
+    <url>/blog/dist/2018/12/29/mocha/</url>
+    <content><![CDATA[<h1 id="mocha-chai-单元测试"><a href="#mocha-chai-单元测试" class="headerlink" title="mocha + chai 单元测试"></a>mocha + chai 单元测试</h1><p>参考链接： <a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html" target="_blank" rel="noopener">测试框架 Mocha 实例教程</a><br>断言库使用 <a href="https://www.chaijs.com/api/bdd/" target="_blank" rel="noopener">chai</a></p>
+<blockquote>
+<p>主要为个人的练习记录存放，下面会展示一些或者重点易错点。</p>
+</blockquote>
+<h2 id="通配符（建议，如果只有一个文件的时候，不要使用-这种匹配模式）。"><a href="#通配符（建议，如果只有一个文件的时候，不要使用-这种匹配模式）。" class="headerlink" title="通配符（建议，如果只有一个文件的时候，不要使用{}这种匹配模式）。"></a>通配符（建议，如果只有一个文件的时候，不要使用{}这种匹配模式）。</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha spec/&#123;my,awesome&#125;.js</span><br><span class="line">$ mocha test/unit<span class="comment">/*.js</span></span><br><span class="line"><span class="comment">$ mocha 'test/**/</span>*.@(js|jsx)<span class="string">' // 也支持node的通配符，使用字符串包裹起来即可</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">提示： 如果只有一个文件的时候，也需要加上, 比如 mocha test/&#123;cf,&#125;.js 否则会报错。</span></span><br><span class="line"><span class="string">Warning: Could not find any test files matching pattern: test/&#123;cf&#125;.js</span></span><br><span class="line"><span class="string">No test files found</span></span><br></pre></td></tr></table></figure>
+<h2 id="递归执行（mocha默认会执行当前目录下的test目录下的文件）"><a href="#递归执行（mocha默认会执行当前目录下的test目录下的文件）" class="headerlink" title="递归执行（mocha默认会执行当前目录下的test目录下的文件）"></a>递归执行（mocha默认会执行当前目录下的test目录下的文件）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">如果想执行内嵌的其他文件，比如：</span><br><span class="line">test/cf<span class="comment">/**.js;</span></span><br><span class="line"><span class="comment">test/gg/tt/**.js;</span></span><br><span class="line"><span class="comment">这种默认使用mocha命令是不会执行的，因为他们不在test目录下。</span></span><br><span class="line"><span class="comment">可以使用：</span></span><br><span class="line"><span class="comment">mocha --recursive 即可以递归执行test目录下所有文件，包含深度嵌套的。</span></span><br></pre></td></tr></table></figure>
+<h2 id="显示报告结果-reporter参数用来指定测试报告的格式，默认是spec格式。"><a href="#显示报告结果-reporter参数用来指定测试报告的格式，默认是spec格式。" class="headerlink" title="显示报告结果(--reporter参数用来指定测试报告的格式，默认是spec格式。)"></a>显示报告结果(<code>--reporter</code>参数用来指定测试报告的格式，默认是<code>spec</code>格式。)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha</span><br><span class="line"># 等同于</span><br><span class="line">$ mocha --reporter spec</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>--reporters</code>参数可以显示所有内置的报告格式。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha --reporters</span><br></pre></td></tr></table></figure>
+<h2 id="生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）"><a href="#生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）" class="headerlink" title="生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）"></a>生成报告结果（使用<a href="http://adamgruber.github.io/mochawesome/" target="_blank" rel="noopener"><code>mochawesome</code></a>模块，可以生成漂亮的HTML格式的报告。）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install --save-dev mochawesome</span><br><span class="line">$ ../node_modules/.bin/mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>mocha</code>命令使用了项目内安装的版本，而不是全局安装的版本，因为<code>mochawesome</code>模块是安装在项目内的。</p>
+<p>然后，测试结果报告就在<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo02/mochawesome-reports" target="_blank" rel="noopener"><code>mochaawesome-reports</code></a>子目录生成。</p>
+<h2 id="配置文件mocha-opts"><a href="#配置文件mocha-opts" class="headerlink" title="配置文件mocha.opts"></a>配置文件mocha.opts</h2><p>Mocha允许在<code>test</code>目录下面，放置配置文件<code>mocha.opts</code>，把命令行参数写在里面。请先进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo03" target="_blank" rel="noopener"><code>demo03</code></a>目录，运行下面的命令。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha --recursive --reporter tap</span><br></pre></td></tr></table></figure>
+<p>上面这个命令有两个参数<code>--recursive</code>、<code>--reporter tap</code>。</p>
+<p>然后，把这两个参数写入<code>test</code>目录下的<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo03/test/mocha.opts" target="_blank" rel="noopener"><code>mocha.opts</code></a>文件。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">--reporter tap</span><br><span class="line">--recursive</span><br></pre></td></tr></table></figure>
+<p>然后，执行<code>mocha</code>就能取得与第一行命令一样的效果。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha</span><br></pre></td></tr></table></figure>
+<p>如果测试用例不是存放在test子目录，可以在<code>mocha.opts</code>写入以下内容。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">otherDirTests</span><br><span class="line">--recursive</span><br></pre></td></tr></table></figure>
+<p>上面代码指定运行<code>otherDirTests</code>目录及其子目录之中的测试脚本。</p>
+<h2 id="ES6测试"><a href="#ES6测试" class="headerlink" title="ES6测试"></a>ES6测试</h2><p>如果测试脚本是用ES6写的，那么运行测试之前，需要先用Babel转码。进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo04" target="_blank" rel="noopener"><code>demo04</code></a>目录，打开<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo04/test/add.test.js" target="_blank" rel="noopener"><code>test/add.test.js</code></a>文件，可以看到这个测试用例是用ES6写的。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> add <span class="keyword">from</span> <span class="string">'../src/add.js'</span>;</span><br><span class="line"><span class="keyword">import</span> chai <span class="keyword">from</span> <span class="string">'chai'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> expect = chai.expect;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'加法函数的测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  it(<span class="string">'1 加 1 应该等于 2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(add(<span class="number">1</span>, <span class="number">1</span>)).to.be.equal(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>ES6转码，需要安装Babel。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install babel-core babel-preset-es2015 --save-dev</span><br></pre></td></tr></table></figure>
+<p>然后，在项目目录下面，新建一个<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo04/.babelrc" target="_blank" rel="noopener"><code>.babelrc</code></a>配置文件。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [ <span class="string">"es2015"</span> ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后，使用<code>--compilers</code>参数指定测试脚本的转码器。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ ../node_modules/mocha/bin/mocha --compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>--compilers</code>参数后面紧跟一个用冒号分隔的字符串，冒号左边是文件的后缀名，右边是用来处理这一类文件的模块名。上面代码表示，运行测试之前，先用<code>babel-core/register</code>模块，处理一下<code>.js</code>文件。由于这里的转码器安装在项目内，所以要使用项目内安装的Mocha；如果转码器安装在全局，就可以使用全局的Mocha。</p>
+<blockquote>
+<p>可以结合mocha.opts使用，或者在package.json中自定义命令去实现。</p>
+</blockquote>
+<h3 id="package-json（使用方式：npm-run-test）"><a href="#package-json（使用方式：npm-run-test）" class="headerlink" title="package.json（使用方式：npm run test）"></a>package.json（使用方式：<code>npm run test</code>）</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"mocha --recursive --compilers js:babel-core/register"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>–compilers在使用过程中提示在未来版本中将被移除，推荐使用下面这种方式！</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"mocha --recursive --require babel-core/register"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Mocha-opts（使用方式：-mocha）"><a href="#Mocha-opts（使用方式：-mocha）" class="headerlink" title="Mocha.opts（使用方式： mocha）"></a>Mocha.opts（使用方式： <code>mocha</code>）</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">--reporter spec</span><br><span class="line">--recursive</span><br><span class="line">--compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
+<p>–compilers在使用过程中提示在未来版本中将被移除，推荐使用下面这种方式！</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">--reporter spec</span><br><span class="line">--recursive</span><br><span class="line">--<span class="built_in">require</span> babel-core/register</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>mocha</category>
+      </categories>
+      <tags>
+        <tag>mocha</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何给无网的服务器linux环境安装nodeJs</title>
     <url>/blog/dist/2021/01/15/no-network-linux-install-nodeJs/</url>
     <content><![CDATA[<ol>
@@ -1172,113 +813,6 @@ merge 操作遇到冲突的时候，当前merge不能继续进行下去。手动
       <tags>
         <tag>node</tag>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm常用命令</title>
-    <url>/blog/dist/2018/12/26/npm-command/</url>
-    <content><![CDATA[<blockquote>
-<p>相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>首先，npm 是node.js自带的功能。查看npm版本</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line"><span class="number">6.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>升级npm版本</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mac下: </span><br><span class="line">	sudo npm install npm -g</span><br><span class="line"><span class="built_in">window</span>下:</span><br><span class="line">	npm install npm -g</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用npm安装模块</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install &lt;Module Name&gt;</span><br><span class="line">eg: 使用npm安装node中的express框架</span><br><span class="line">	npm install express</span><br></pre></td></tr></table></figure>
-<p>安装好之后，express包就会放在当前工程目录下的node_modules 目录中，因此在代码中只需要通过 <strong>require(‘express’)</strong> 的方式就好，无需指定第三方包路径。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>默认方式为本地安装，还有一种是全局安装</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">npm install express -g   # 全局安装</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>接下来，我们列举下容易混淆的方式（注意①②的不同）</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install X:</span><br><span class="line"></span><br><span class="line">	- 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">	- 不会修改package.json</span><br><span class="line"></span><br><span class="line">	- 之后运行npm install命令时，不会自动安装X</span><br><span class="line">    </span><br><span class="line">npm install X --save:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ①dependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，会自动安装msbuild到		  node_modules目录中</span><br><span class="line">npm install X --save-dev:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ②devDependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，不会自动安装X到			  node_modules目录中</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>npm install 使用原则</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">运行时需要用到的包使用--save，否则使用--save-dev。</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>npm 卸载模块</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall X</span><br><span class="line">卸载后，你可以到 /node_modules/ 目录下查看包是否还存在，或者使用以下命令查看：</span><br><span class="line">npm ls</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>更新模块</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update X</span><br></pre></td></tr></table></figure>
-<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><blockquote>
-<p>大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。淘宝 NPM 镜像是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。</p>
-<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
-<p>注意： 如果使用的是cnpm，则只需要将第一个npm命令变为cnpm即可，其他和npm命令使用方式相同。</p>
-]]></content>
-      <categories>
-        <category>npm</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>单元测试</title>
-    <url>/blog/dist/2018/12/29/mocha/</url>
-    <content><![CDATA[<h1 id="mocha-chai-单元测试"><a href="#mocha-chai-单元测试" class="headerlink" title="mocha + chai 单元测试"></a>mocha + chai 单元测试</h1><p>参考链接： <a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html" target="_blank" rel="noopener">测试框架 Mocha 实例教程</a><br>断言库使用 <a href="https://www.chaijs.com/api/bdd/" target="_blank" rel="noopener">chai</a></p>
-<blockquote>
-<p>主要为个人的练习记录存放，下面会展示一些或者重点易错点。</p>
-</blockquote>
-<h2 id="通配符（建议，如果只有一个文件的时候，不要使用-这种匹配模式）。"><a href="#通配符（建议，如果只有一个文件的时候，不要使用-这种匹配模式）。" class="headerlink" title="通配符（建议，如果只有一个文件的时候，不要使用{}这种匹配模式）。"></a>通配符（建议，如果只有一个文件的时候，不要使用{}这种匹配模式）。</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha spec/&#123;my,awesome&#125;.js</span><br><span class="line">$ mocha test/unit<span class="comment">/*.js</span></span><br><span class="line"><span class="comment">$ mocha 'test/**/</span>*.@(js|jsx)<span class="string">' // 也支持node的通配符，使用字符串包裹起来即可</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">提示： 如果只有一个文件的时候，也需要加上, 比如 mocha test/&#123;cf,&#125;.js 否则会报错。</span></span><br><span class="line"><span class="string">Warning: Could not find any test files matching pattern: test/&#123;cf&#125;.js</span></span><br><span class="line"><span class="string">No test files found</span></span><br></pre></td></tr></table></figure>
-<h2 id="递归执行（mocha默认会执行当前目录下的test目录下的文件）"><a href="#递归执行（mocha默认会执行当前目录下的test目录下的文件）" class="headerlink" title="递归执行（mocha默认会执行当前目录下的test目录下的文件）"></a>递归执行（mocha默认会执行当前目录下的test目录下的文件）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">如果想执行内嵌的其他文件，比如：</span><br><span class="line">test/cf<span class="comment">/**.js;</span></span><br><span class="line"><span class="comment">test/gg/tt/**.js;</span></span><br><span class="line"><span class="comment">这种默认使用mocha命令是不会执行的，因为他们不在test目录下。</span></span><br><span class="line"><span class="comment">可以使用：</span></span><br><span class="line"><span class="comment">mocha --recursive 即可以递归执行test目录下所有文件，包含深度嵌套的。</span></span><br></pre></td></tr></table></figure>
-<h2 id="显示报告结果-reporter参数用来指定测试报告的格式，默认是spec格式。"><a href="#显示报告结果-reporter参数用来指定测试报告的格式，默认是spec格式。" class="headerlink" title="显示报告结果(--reporter参数用来指定测试报告的格式，默认是spec格式。)"></a>显示报告结果(<code>--reporter</code>参数用来指定测试报告的格式，默认是<code>spec</code>格式。)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha</span><br><span class="line"># 等同于</span><br><span class="line">$ mocha --reporter spec</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>--reporters</code>参数可以显示所有内置的报告格式。</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha --reporters</span><br></pre></td></tr></table></figure>
-<h2 id="生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）"><a href="#生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）" class="headerlink" title="生成报告结果（使用mochawesome模块，可以生成漂亮的HTML格式的报告。）"></a>生成报告结果（使用<a href="http://adamgruber.github.io/mochawesome/" target="_blank" rel="noopener"><code>mochawesome</code></a>模块，可以生成漂亮的HTML格式的报告。）</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install --save-dev mochawesome</span><br><span class="line">$ ../node_modules/.bin/mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
-<p>上面代码中，<code>mocha</code>命令使用了项目内安装的版本，而不是全局安装的版本，因为<code>mochawesome</code>模块是安装在项目内的。</p>
-<p>然后，测试结果报告就在<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo02/mochawesome-reports" target="_blank" rel="noopener"><code>mochaawesome-reports</code></a>子目录生成。</p>
-<h2 id="配置文件mocha-opts"><a href="#配置文件mocha-opts" class="headerlink" title="配置文件mocha.opts"></a>配置文件mocha.opts</h2><p>Mocha允许在<code>test</code>目录下面，放置配置文件<code>mocha.opts</code>，把命令行参数写在里面。请先进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo03" target="_blank" rel="noopener"><code>demo03</code></a>目录，运行下面的命令。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha --recursive --reporter tap</span><br></pre></td></tr></table></figure>
-<p>上面这个命令有两个参数<code>--recursive</code>、<code>--reporter tap</code>。</p>
-<p>然后，把这两个参数写入<code>test</code>目录下的<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo03/test/mocha.opts" target="_blank" rel="noopener"><code>mocha.opts</code></a>文件。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">--reporter tap</span><br><span class="line">--recursive</span><br></pre></td></tr></table></figure>
-<p>然后，执行<code>mocha</code>就能取得与第一行命令一样的效果。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ mocha</span><br></pre></td></tr></table></figure>
-<p>如果测试用例不是存放在test子目录，可以在<code>mocha.opts</code>写入以下内容。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">otherDirTests</span><br><span class="line">--recursive</span><br></pre></td></tr></table></figure>
-<p>上面代码指定运行<code>otherDirTests</code>目录及其子目录之中的测试脚本。</p>
-<h2 id="ES6测试"><a href="#ES6测试" class="headerlink" title="ES6测试"></a>ES6测试</h2><p>如果测试脚本是用ES6写的，那么运行测试之前，需要先用Babel转码。进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo04" target="_blank" rel="noopener"><code>demo04</code></a>目录，打开<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo04/test/add.test.js" target="_blank" rel="noopener"><code>test/add.test.js</code></a>文件，可以看到这个测试用例是用ES6写的。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> add <span class="keyword">from</span> <span class="string">'../src/add.js'</span>;</span><br><span class="line"><span class="keyword">import</span> chai <span class="keyword">from</span> <span class="string">'chai'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> expect = chai.expect;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'加法函数的测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  it(<span class="string">'1 加 1 应该等于 2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(add(<span class="number">1</span>, <span class="number">1</span>)).to.be.equal(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>ES6转码，需要安装Babel。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install babel-core babel-preset-es2015 --save-dev</span><br></pre></td></tr></table></figure>
-<p>然后，在项目目录下面，新建一个<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo04/.babelrc" target="_blank" rel="noopener"><code>.babelrc</code></a>配置文件。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [ <span class="string">"es2015"</span> ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最后，使用<code>--compilers</code>参数指定测试脚本的转码器。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ ../node_modules/mocha/bin/mocha --compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
-<p>上面代码中，<code>--compilers</code>参数后面紧跟一个用冒号分隔的字符串，冒号左边是文件的后缀名，右边是用来处理这一类文件的模块名。上面代码表示，运行测试之前，先用<code>babel-core/register</code>模块，处理一下<code>.js</code>文件。由于这里的转码器安装在项目内，所以要使用项目内安装的Mocha；如果转码器安装在全局，就可以使用全局的Mocha。</p>
-<blockquote>
-<p>可以结合mocha.opts使用，或者在package.json中自定义命令去实现。</p>
-</blockquote>
-<h3 id="package-json（使用方式：npm-run-test）"><a href="#package-json（使用方式：npm-run-test）" class="headerlink" title="package.json（使用方式：npm run test）"></a>package.json（使用方式：<code>npm run test</code>）</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"mocha --recursive --compilers js:babel-core/register"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>–compilers在使用过程中提示在未来版本中将被移除，推荐使用下面这种方式！</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"mocha --recursive --require babel-core/register"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Mocha-opts（使用方式：-mocha）"><a href="#Mocha-opts（使用方式：-mocha）" class="headerlink" title="Mocha.opts（使用方式： mocha）"></a>Mocha.opts（使用方式： <code>mocha</code>）</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">--reporter spec</span><br><span class="line">--recursive</span><br><span class="line">--compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
-<p>–compilers在使用过程中提示在未来版本中将被移除，推荐使用下面这种方式！</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">--reporter spec</span><br><span class="line">--recursive</span><br><span class="line">--<span class="built_in">require</span> babel-core/register</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>mocha</category>
-      </categories>
-      <tags>
-        <tag>mocha</tag>
       </tags>
   </entry>
   <entry>
@@ -1417,6 +951,61 @@ merge 操作遇到冲突的时候，当前merge不能继续进行下去。手动
         <tag>vue</tag>
         <tag>数据劫持</tag>
         <tag>发布订阅</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm常用命令</title>
+    <url>/blog/dist/2018/12/26/npm-command/</url>
+    <content><![CDATA[<blockquote>
+<p>相信大家很多人，包括我自己，常常会对npm install –save-dev 、 npm install –save傻傻分不清楚,今天这里主要是对npm的常用命令进行一个总结。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>首先，npm 是node.js自带的功能。查看npm版本</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line"><span class="number">6.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>升级npm版本</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">mac下: </span><br><span class="line">	sudo npm install npm -g</span><br><span class="line"><span class="built_in">window</span>下:</span><br><span class="line">	npm install npm -g</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用npm安装模块</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install &lt;Module Name&gt;</span><br><span class="line">eg: 使用npm安装node中的express框架</span><br><span class="line">	npm install express</span><br></pre></td></tr></table></figure>
+<p>安装好之后，express包就会放在当前工程目录下的node_modules 目录中，因此在代码中只需要通过 <strong>require(‘express’)</strong> 的方式就好，无需指定第三方包路径。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认方式为本地安装，还有一种是全局安装</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">npm install express -g   # 全局安装</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>接下来，我们列举下容易混淆的方式（注意①②的不同）</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install X:</span><br><span class="line"></span><br><span class="line">	- 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">	- 不会修改package.json</span><br><span class="line"></span><br><span class="line">	- 之后运行npm install命令时，不会自动安装X</span><br><span class="line">    </span><br><span class="line">npm install X --save:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ①dependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，会自动安装msbuild到		  node_modules目录中</span><br><span class="line">npm install X --save-dev:</span><br><span class="line"></span><br><span class="line">    - 会把X包安装到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 会在package.json的 ②devDependencies 属性下添加X</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install命令时，会自动安装X到node_modules目录中</span><br><span class="line"></span><br><span class="line">    - 之后运行npm install -production或者注明NODE_ENV变量值为production时，不会自动安装X到			  node_modules目录中</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>npm install 使用原则</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">运行时需要用到的包使用--save，否则使用--save-dev。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>npm 卸载模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall X</span><br><span class="line">卸载后，你可以到 /node_modules/ 目录下查看包是否还存在，或者使用以下命令查看：</span><br><span class="line">npm ls</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>更新模块</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm update X</span><br></pre></td></tr></table></figure>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><blockquote>
+<p>大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。淘宝 NPM 镜像是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。</p>
+<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
+<p>注意： 如果使用的是cnpm，则只需要将第一个npm命令变为cnpm即可，其他和npm命令使用方式相同。</p>
+]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
